@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+  <!-- Tray-paper motif (crowns, hearts, playing-card suits) drawn after the house's tray liner. Tileable. -->
+  <g stroke="rgba(20,17,17,.3)">
+    <g transform="translate(14 20) rotate(-8)"><path d="M0 24 4 6l9 10 9-14 9 14 9-10 4 18Z"/><path d="M1 30h42"/><circle cx="22" cy="2" r="2"/></g>
+    <g transform="translate(140 34) rotate(12)"><path d="M10 0C10 7 0 9 0 15c0 5 7 6 10 1 3 5 10 4 10-1C20 9 10 7 10 0Z"/><path d="M10 16 7 24h6Z"/></g>
+    <g transform="translate(70 120) rotate(-14)"><circle cx="10" cy="5" r="5"/><circle cx="4" cy="13" r="5"/><circle cx="16" cy="13" r="5"/><path d="M10 14 7 24h6Z"/></g>
+    <g transform="translate(150 150) rotate(6)"><path d="M0 24 4 6l9 10 9-14 9 14 9-10 4 18Z"/><path d="M1 30h42"/></g>
+    <path d="M110 92c4-6 10-6 14 0M180 96c3-4 7-4 10 0M20 190c4-5 9-5 13 0"/>
+  </g>
+  <g stroke="rgba(212,22,28,.5)">
+    <g transform="translate(92 22) rotate(10)"><path d="M10 20C4 15 0 11 0 6c0-6 8-8 10-2 2-6 10-4 10 2 0 5-4 9-10 14Z"/></g>
+    <g transform="translate(22 86) rotate(-6)"><path d="M10 0 19 12 10 24 1 12Z"/></g>
+    <g transform="translate(176 92) rotate(-18)"><path d="M7 14C3 11 0 8 0 4c0-4 5-5 7-1 2-4 7-3 7 1 0 4-3 7-7 10Z"/></g>
+    <g transform="translate(120 176) rotate(14)"><path d="M10 20C4 15 0 11 0 6c0-6 8-8 10-2 2-6 10-4 10 2 0 5-4 9-10 14Z"/></g>
+    <g transform="translate(48 170) rotate(20)"><path d="M8 0 15 10 8 20 1 10Z"/></g>
+  </g>
+  <g fill="rgba(20,17,17,.25)" stroke="none"><circle cx="60" cy="60" r="1.6"/><circle cx="196" cy="20" r="1.6"/><circle cx="120" cy="130" r="1.6"/><circle cx="12" cy="146" r="1.6"/><circle cx="200" cy="200" r="1.6"/></g>
+</svg>
