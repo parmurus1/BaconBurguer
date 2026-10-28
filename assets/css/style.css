@@ -83,7 +83,7 @@ body {
 
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
-p, h1, h2, h3, figure, dl, dd, ol, ul, address { margin: 0; }
+p, h1, h2, h3, h4, figure, dl, dd, ol, ul, address { margin: 0; }
 ol[role="list"], ul[role="list"] { list-style: none; padding: 0; }
 address { font-style: normal; }
 
@@ -598,6 +598,13 @@ address { font-style: normal; }
 .oferta--mais .oferta__foto img { aspect-ratio: 16 / 8; }
 .oferta--mais .oferta__desc { margin-bottom: 1.25rem; }
 
+/* ---------- porções ---------- */
+
+.secao__cabeca--sub { margin-top: clamp(5rem, 11vw, 8rem); }
+.letreiro-parede--sub { font-size: clamp(2.1rem, 6.4vw, 3.8rem); }
+.oferta--retrato .oferta__foto img { aspect-ratio: 4 / 5; }
+.oferta--salao .oferta__num { background: var(--tinta); }
+
 /* ---------- a casa ---------- */
 
 .casa__grade {
@@ -825,6 +832,10 @@ body { padding-bottom: 80px; }
     -webkit-mask-image: linear-gradient(to right, #000 52%, transparent 64%);
     mask-image: linear-gradient(to right, #000 52%, transparent 64%);
   }
+  .mural--porcoes > .oferta { margin-top: 0; }
+  .mural--porcoes > .oferta--deitada { grid-column: 1 / -1; }
+  .mural--porcoes > .oferta:nth-child(2) { margin-top: 2.5rem; }
+  .mural--porcoes > .oferta:nth-child(5) { margin-top: 2rem; }
   .onde__grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mapa { grid-column: 1 / -1; }
   .mapa iframe { aspect-ratio: 16 / 7; }
@@ -880,6 +891,12 @@ body { padding-bottom: 80px; }
   .oferta:nth-child(4) { grid-column: 5 / 9; margin-top: 3.5rem; }
   .oferta:nth-child(5) { grid-column: 9 / 13; margin-top: .5rem; }
   .oferta--mais { grid-column: 2 / 12; margin-top: 1rem; }
+  .mural--porcoes > .oferta:nth-child(1) { grid-column: 1 / 5; grid-row: 1; margin-top: 0; }
+  .mural--porcoes > .oferta:nth-child(2) { grid-column: 5 / 9; grid-row: 1; margin-top: 3.5rem; }
+  .mural--porcoes > .oferta:nth-child(4) { grid-column: 9 / 13; grid-row: 1; margin-top: .75rem; }
+  .mural--porcoes > .oferta:nth-child(3) { grid-column: 1 / 8; grid-row: 2; margin-top: 0; }
+  .mural--porcoes > .oferta:nth-child(5) { grid-column: 8 / 12; grid-row: 2; margin-top: 2.5rem; }
+  .mural--porcoes > .oferta--mais { grid-column: 2 / 12; grid-row: 3; }
   .oferta--destaque { display: flex; }
   .oferta--destaque .oferta__corpo {
     display: grid;

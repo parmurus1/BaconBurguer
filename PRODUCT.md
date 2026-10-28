@@ -25,7 +25,7 @@ A neighbourhood burger house with a periferia identity: pretzel-style dark artes
 ## Operating Context
 
 - Address: R. Amaro Velho, 111 - Jardim Vergueiro, São Paulo - SP, 05818-230
-- Hours: terça a quinta 16:00–22:45; sexta a domingo 16:00–23:45 (segunda: closed, inferred from the hours given)
+- Hours: terça a quinta 16:00–22:45; sexta a domingo 16:00–23:45 (segunda: closed, confirmed)
 - Phone/WhatsApp: (11) 93437-1711
 - Order online: https://baconburguer.saipos.com/home
 - Keeta: https://fooddelivery-eu.mykeeta.com/mpweb/shop_golden?useShopPoi=1&channel=googlemap&shopId=159385550&cityId=102302389&lch=default%7E*googlemap%7E*BR%7E*159385550&locale=pt-BR&region=BR&utm_source=organic&utm_medium=others&utm_campaign=googlemap
@@ -40,7 +40,14 @@ A neighbourhood burger house with a periferia identity: pretzel-style dark artes
   3. Smash Burguer — R$ 37,00
   4. Danger Burguer — R$ 52,00
   5. Sweet Onion — R$ 44,00
-- Porções, bebidas, more venue photos: owner will send later. Do not invent items or prices.
+- Porções e shake (confirmed, with prices):
+  1. Batata Cheddar e Bacon (serve 2) — R$ 39,00
+  2. Batata com costela defumada e Catupiry — R$ 42,00 — somente no salão (not on delivery)
+  3. Nuggets (10 unidades), molho secreto ou maionese verde — R$ 26,00
+  4. Batata Simples (serve 2), maionese artesanal — R$ 26,00
+  5. Milk Shake Ovomaltine — R$ 17,00
+- Other drinks and more venue photos: not provided. Do not invent items or prices.
+- Closed on Mondays (confirmed by the owner).
 
 ## Brand Commitments
 
