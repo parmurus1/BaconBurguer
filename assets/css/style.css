@@ -24,7 +24,6 @@
 
 :root {
   --parede: #0c0b0b;
-  --tabua-junta: rgba(0, 0, 0, .7);
   --papel: #f6f4ef;
   --papel-2: #ebe7de;
   --tinta: #141111;
@@ -76,11 +75,10 @@ body {
   font-stretch: 100%;
   background-color: var(--parede);
   /* tábuas pretas pintadas, como as paredes da casa */
-  background-image:
-    var(--grao),
-    repeating-linear-gradient(90deg, transparent 0 136px, var(--tabua-junta) 136px 139px, rgba(255, 255, 255, .025) 139px 140px),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, .012) 0 140px, transparent 140px 280px, rgba(0, 0, 0, .18) 280px 420px);
-  background-size: 180px 180px, auto, auto;
+  /* tábuas pretas pintadas, como as paredes da casa (assets/img/parede.webp, tile 1200x900) */
+  background-image: url("../img/parede.webp");
+  background-size: 1200px 900px;
+  background-position: center top;
 }
 
 img { display: block; max-width: 100%; height: auto; }
@@ -404,7 +402,7 @@ address { font-style: normal; }
   grid-column: 1;
   justify-self: end;
   width: min(84%, 520px);
-  margin-top: -1.25rem;
+  margin-top: 1.75rem;
   z-index: 2;
 }
 .estrela {
@@ -418,7 +416,7 @@ address { font-style: normal; }
   place-items: center;
   width: clamp(104px, 28vw, 158px);
   aspect-ratio: 1;
-  margin-top: -.25rem;
+  margin-top: .75rem;
   color: #fff;
   text-decoration: none;
   transform: rotate(-10deg);
@@ -439,10 +437,14 @@ address { font-style: normal; }
 
 /* ---------- faixa ---------- */
 
+.faixa-moldura {
+  overflow: hidden;
+  padding: clamp(1rem, 3vw, 2.5rem) 0 1.5rem;
+}
 .faixa {
   position: relative;
   width: 112vw;
-  margin: clamp(1rem, 3vw, 2.5rem) 0 0 -6vw;
+  margin-left: -6vw;
   padding: .85rem 0;
   overflow: hidden;
   background-color: var(--vermelho);
@@ -523,13 +525,15 @@ address { font-style: normal; }
   right: 6px;
   display: grid;
   place-items: center;
-  width: 3.4rem;
-  height: 3.4rem;
-  border-radius: 50%;
+  min-width: 3.6rem;
+  height: 3.6rem;
+  padding: 0 .55rem;
+  border-radius: 1.8rem;
   background: var(--vermelho);
   color: #fff;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1;
+  white-space: nowrap;
   transform: rotate(9deg);
   box-shadow: 0 6px 12px -4px rgba(0, 0, 0, .6);
 }
@@ -579,6 +583,18 @@ address { font-style: normal; }
 .cartaz--vermelho .oferta__desc { color: #fff; }
 .cartaz--vermelho .oferta__num { background: var(--tinta); }
 
+.oferta--mais::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url("../img/bandeja.svg") 0 0 / 220px 220px;
+  /* o papel de bandeja aparece em volta da foto e some antes do texto */
+  -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent 58%);
+  mask-image: linear-gradient(to bottom, #000 40%, transparent 58%);
+}
+.oferta--mais > * { position: relative; z-index: 1; }
 .oferta--mais .oferta__foto img { aspect-ratio: 16 / 8; }
 .oferta--mais .oferta__desc { margin-bottom: 1.25rem; }
 
@@ -666,7 +682,7 @@ address { font-style: normal; }
 
 .endereco__texto { margin-top: 1rem; font-size: 1.15rem; line-height: 1.45; font-weight: 600; }
 .endereco__links { display: grid; gap: .7rem; margin-top: 1.5rem; }
-.endereco__links .botao { width: 100%; justify-content: flex-start; text-transform: none; letter-spacing: .01em; font-stretch: 90%; overflow-wrap: anywhere; text-align: left; }
+.endereco__links .botao { width: 100%; justify-content: flex-start; text-transform: none; letter-spacing: .01em; font-size: .92rem; font-stretch: 75%; text-align: left; }
 
 .mapa { padding: 10px; }
 .mapa::before {
@@ -724,6 +740,14 @@ address { font-style: normal; }
 
 /* ---------- rodapé ---------- */
 
+.bandeja {
+  height: clamp(56px, 8vw, 84px);
+  background-color: var(--papel);
+  background-image: url("../img/bandeja.svg");
+  background-size: 220px 220px;
+  clip-path: polygon(0 14%, 4% 0, 9% 12%, 15% 2%, 22% 10%, 30% 0, 37% 12%, 45% 3%, 53% 11%, 61% 0, 69% 10%, 77% 2%, 85% 12%, 92% 1%, 100% 10%, 100% 100%, 0 100%);
+  transform: rotate(-.6deg);
+}
 .rodape {
   max-width: var(--largura);
   margin: 0 auto;
@@ -790,12 +814,17 @@ body { padding-bottom: 80px; }
   .oferta--destaque, .oferta--mais { grid-column: 1 / -1; }
   .oferta:nth-child(3) { margin-top: 2rem; }
   .oferta:nth-child(5) { margin-top: -1rem; }
-  .oferta--destaque { display: grid; grid-template-columns: 1.15fr 1fr; gap: 1.5rem; align-items: center; }
-  .oferta--destaque .oferta__foto img { aspect-ratio: 4 / 3.4; }
+  .mural > * { align-self: start; }
+  .oferta--destaque { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 1.5rem; align-items: center; }
+  .oferta--destaque .oferta__foto img { aspect-ratio: 3 / 2; }
   .oferta--destaque .oferta__nome { font-size: clamp(2.2rem, 4.6vw, 3.4rem); }
   .oferta--destaque .preco__int { font-size: clamp(4.75rem, 8vw, 6rem); }
   .oferta--mais { display: grid; grid-template-columns: 1.5fr 1fr; gap: 1.5rem; align-items: center; }
   .oferta--mais .oferta__foto img { aspect-ratio: 16 / 9; }
+  .oferta--mais::after {
+    -webkit-mask-image: linear-gradient(to right, #000 52%, transparent 64%);
+    mask-image: linear-gradient(to right, #000 52%, transparent 64%);
+  }
   .onde__grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mapa { grid-column: 1 / -1; }
   .mapa iframe { aspect-ratio: 16 / 7; }
@@ -851,10 +880,18 @@ body { padding-bottom: 80px; }
   .oferta:nth-child(4) { grid-column: 5 / 9; margin-top: 3.5rem; }
   .oferta:nth-child(5) { grid-column: 9 / 13; margin-top: .5rem; }
   .oferta--mais { grid-column: 2 / 12; margin-top: 1rem; }
-  .oferta--destaque { grid-template-columns: 1.15fr 1fr; align-items: stretch; }
-  .oferta--destaque .oferta__foto { display: flex; }
-  .oferta--destaque .oferta__foto img { aspect-ratio: auto; height: 100%; min-height: 380px; }
-  .oferta--destaque .oferta__corpo { padding-block: 1.5rem .5rem; justify-content: center; }
+  .oferta--destaque { display: flex; }
+  .oferta--destaque .oferta__corpo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 2rem;
+    align-items: end;
+  }
+  .oferta--destaque .oferta__nome,
+  .oferta--destaque .oferta__chamada,
+  .oferta--destaque .oferta__desc { grid-column: 1; }
+  .oferta--destaque .preco { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
+  .oferta--destaque .oferta__corpo .botao { grid-column: 2; grid-row: 3; align-self: end; }
 
   .casa__texto { grid-column: 1 / 6; align-self: center; margin-top: -2rem; }
   .casa__foto--a { grid-column: 6 / 10; }

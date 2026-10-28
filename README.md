@@ -36,5 +36,6 @@ assets/img/            fotos dos lanches e da casa, porco.svg
 
 - [ ] Logo oficial do porco: `assets/img/porco.svg`, o `<symbol id="pig">` no `index.html` e o `favicon.svg` são um redesenho provisório a partir do adesivo.
 - [ ] Porções e bebidas, com fotos e preços (hoje o cartaz "E tem mais" só manda pro cardápio completo).
+- [ ] Fotos dos lanches em alta resolução (as atuais têm 700px de largura e ficam um pouco moles em celular com tela retina). Com os originais, gerar versões de 1400px e usar `srcset`.
 - [ ] Mais fotos da casa e da fachada.
 - [ ] Segunda-feira aparece como **Fechado**: confirmar (foi deduzido do horário enviado).
