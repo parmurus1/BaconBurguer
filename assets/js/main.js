@@ -41,6 +41,9 @@
     const { dia, min } = agoraEmSP();
     const hoje = HORARIO[dia];
     if (hoje && min >= hoje[0] && min < hoje[1]) {
+      if (hoje[1] - min <= 30) {
+        return { aberto: true, ultimos: true, dia, detalhe: `fecha ${hora(hoje[1])}`, frase: `Últimos pedidos! Fecha às ${hora(hoje[1])}.` };
+      }
       return { aberto: true, dia, detalhe: `até ${hora(hoje[1])}`, frase: `Aberto agora, até ${hora(hoje[1])}.` };
     }
     if (hoje && min < hoje[0]) {
@@ -63,11 +66,12 @@
 
     const placa = document.querySelector("[data-status]");
     if (placa) {
-      placa.dataset.state = s.aberto ? "aberto" : "fechado";
-      placa.querySelector("[data-status-label]").textContent = s.aberto ? "Aberto" : "Fechado";
+      const estadoAntes = placa.dataset.state;
+      placa.dataset.state = s.ultimos ? "ultimos" : s.aberto ? "aberto" : "fechado";
+      placa.querySelector("[data-status-label]").textContent = s.ultimos ? "Últimos pedidos" : s.aberto ? "Aberto" : "Fechado";
       placa.querySelector("[data-status-detail]").textContent = s.detalhe;
       placa.setAttribute("aria-label", `${s.frase} Ver horário e endereço`);
-      if (!reduzMovimento) {
+      if (!reduzMovimento && estadoAntes !== placa.dataset.state) {
         placa.classList.remove("is-balancando");
         void placa.offsetWidth;
         placa.classList.add("is-balancando");
@@ -210,6 +214,71 @@
       }, reduzMovimento ? 0 : 750);
     });
   }
+
+  /* ---------- Easter egg: 5 cliques no porco ---------- */
+
+  const porcos = document.querySelectorAll("[data-porco]");
+  let cliquesPorco = 0;
+  let timerPorco = null;
+  let chovendo = false;
+
+  function oinc(origem) {
+    const r = origem.getBoundingClientRect();
+    const balao = document.createElement("div");
+    balao.className = "oinc";
+    balao.textContent = "OINC!";
+    balao.setAttribute("aria-hidden", "true");
+    balao.style.left = `${Math.min(window.innerWidth - 150, Math.max(12, r.left + r.width * 0.55))}px`;
+    balao.style.top = `${Math.max(12, r.top - 64)}px`;
+    document.body.appendChild(balao);
+    setTimeout(() => balao.remove(), 2200);
+  }
+
+  function chuvaDeBacon() {
+    if (chovendo || reduzMovimento || !Element.prototype.animate) return;
+    chovendo = true;
+    const ceu = document.createElement("div");
+    ceu.className = "chuva-bacon";
+    ceu.setAttribute("aria-hidden", "true");
+    document.body.appendChild(ceu);
+    const total = window.innerWidth < 640 ? 22 : 38;
+    let restantes = total;
+    for (let i = 0; i < total; i++) {
+      const tira = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      tira.setAttribute("viewBox", "0 0 120 34");
+      tira.innerHTML = '<use href="#bacon"/>';
+      const largura = 70 + Math.random() * 70;
+      tira.style.width = `${largura}px`;
+      tira.style.left = `${Math.random() * 100}%`;
+      ceu.appendChild(tira);
+      const giro = (Math.random() * 2 - 1) * 540;
+      const deriva = (Math.random() * 2 - 1) * 120;
+      const anim = tira.animate([
+        { transform: `translate(-50%, -60px) rotate(${Math.random() * 90 - 45}deg)` },
+        { transform: `translate(calc(-50% + ${deriva}px), ${window.innerHeight + 80}px) rotate(${giro}deg)` },
+      ], { duration: 1800 + Math.random() * 1400, delay: Math.random() * 700, easing: "cubic-bezier(.3,.1,.7,1)", fill: "both" });
+      anim.onfinish = () => {
+        tira.remove();
+        if (--restantes === 0) { ceu.remove(); chovendo = false; }
+      };
+    }
+  }
+
+  porcos.forEach((porco) => {
+    porco.addEventListener("click", () => {
+      cliquesPorco += 1;
+      porco.classList.remove("is-cutucado");
+      void porco.getBoundingClientRect();
+      porco.classList.add("is-cutucado");
+      clearTimeout(timerPorco);
+      timerPorco = setTimeout(() => { cliquesPorco = 0; }, 1800);
+      if (cliquesPorco >= 5) {
+        cliquesPorco = 0;
+        oinc(porco);
+        chuvaDeBacon();
+      }
+    });
+  });
 
   /* ---------- Barra de pedido no celular ---------- */
 
