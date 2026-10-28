@@ -40,13 +40,18 @@ A neighbourhood burger house with a periferia identity: pretzel-style dark artes
   3. Smash Burguer — R$ 37,00
   4. Danger Burguer — R$ 52,00
   5. Sweet Onion — R$ 44,00
+  6. Chicken Burguer (frango empanado) — R$ 38,00
+  7. Josyas Burguer (vegetariano) — R$ 37,00
+- Combo Bacon Burguer (Bacon Burguer + batata individual + refri lata 350ml) — R$ 57,00
 - Porções e shake (confirmed, with prices):
   1. Batata Cheddar e Bacon (serve 2) — R$ 39,00
   2. Batata com costela defumada e Catupiry — R$ 42,00 — somente no salão (not on delivery)
   3. Nuggets (10 unidades), molho secreto ou maionese verde — R$ 26,00
   4. Batata Simples (serve 2), maionese artesanal — R$ 26,00
   5. Milk Shake Ovomaltine — R$ 17,00
-- Other drinks and more venue photos: not provided. Do not invent items or prices.
+  6. Milk Shake Morango — R$ 17,00
+- Other drinks (refri etc.) exist but the owner chose not to list them on the site.
+- The venue has a corner signed "Praça Sérgio Vaz" (seen in photos).
 - Closed on Mondays (confirmed by the owner).
 
 ## Brand Commitments
