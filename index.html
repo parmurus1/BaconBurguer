@@ -161,151 +161,207 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <p class="pincel secao__nota">Escolhe o seu e pede aí.</p>
     </header>
 
-    <ol class="mural" role="list">
-      <li class="cartaz oferta oferta--destaque" style="--r:-1deg">
+    <article class="cartaz combo" style="--r:-.7deg" aria-labelledby="titulo-combo">
+      <span class="fita fita--e" aria-hidden="true"></span>
+      <span class="fita fita--d" aria-hidden="true"></span>
+      <figure class="combo__foto">
+        <img src="assets/img/combo-bacon.webp" width="700" height="467" loading="lazy" alt="Combo Bacon Burguer: o lanche na tábua, caixinha de batata frita, lata de refrigerante e potinhos de molho">
+      </figure>
+      <div class="combo__corpo">
+        <p class="combo__selo" aria-hidden="true"><svg><use href="#burst"/></svg><span>Combo</span></p>
+        <h3 id="titulo-combo" class="combo__nome">Combo Bacon Burguer</h3>
+        <p class="combo__soma pincel">Bacon Burguer <b>+</b> batata individual <b>+</b> refri lata 350ml</p>
+        <p class="oferta__desc">Aqui seu pedido fica completo: o Bacon Burguer com pão artesanal, 160g do nosso blend, bacon fritinho, cheddar, alface, tomate, cebola roxa e molho secreto.</p>
+        <div class="combo__fecho">
+          <p class="preco" aria-label="57 reais"><span class="preco__rs">R$</span><span class="preco__int">57</span><span class="preco__cent">,00</span></p>
+          <a class="botao botao--vermelho botao--grande" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir o combo <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </article>
+
+    <div class="cardapio__barra">
+      <div class="abas" role="tablist" aria-label="Categorias do cardápio" data-abas>
+        <button class="aba" type="button" role="tab" id="aba-lanches" aria-controls="painel-lanches" aria-selected="true" data-aba="lanches">Lanches <span class="aba__qtd">7</span></button>
+        <button class="aba" type="button" role="tab" id="aba-porcoes" aria-controls="painel-porcoes" aria-selected="false" data-aba="porcoes">Porções <span class="aba__qtd">4</span></button>
+        <button class="aba" type="button" role="tab" id="aba-shakes" aria-controls="painel-shakes" aria-selected="false" data-aba="shakes">Shakes <span class="aba__qtd">2</span></button>
+      </div>
+      <button class="botao botao--papel sorteio" type="button" data-sorteio>
+        <svg class="sorteio__porco" aria-hidden="true"><use href="#pig"/></svg>Deixa o porco escolher
+      </button>
+    </div>
+    <p class="sr-only" aria-live="polite" data-sorteio-msg></p>
+
+    <div class="painel" id="painel-lanches" role="tabpanel" aria-labelledby="aba-lanches" data-painel="lanches">
+      <h3 class="painel__titulo">Lanches</h3>
+      <p class="pincel painel__dica" aria-hidden="true">arrasta pro lado <svg viewBox="0 0 60 20"><path d="M2 12c16-6 34-6 52-2m0 0-8-6m8 6-9 5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
+      <ol class="mural mural--lanches" role="list">
+        <li class="cartaz oferta oferta--destaque" style="--r:-1deg" data-nome="Bacon Burguer">
         <figure class="oferta__foto">
           <span class="fita fita--topo" aria-hidden="true"></span>
           <img src="assets/img/burger-bacon.webp" width="700" height="467" loading="lazy" alt="Bacon Burguer com cheddar, bacon, alface, tomate e cebola roxa no pão artesanal">
         </figure>
         <div class="oferta__corpo">
-          <p class="oferta__num pincel" aria-hidden="true">160g</p>
-          <h3 class="oferta__nome">Bacon Burguer</h3>
+        <p class="oferta__num pincel" aria-hidden="true">160g</p>
+        <h4 class="oferta__nome">Bacon Burguer</h4>
           <p class="oferta__chamada pincel">O que dá nome à casa.</p>
           <p class="oferta__desc">Pão artesanal, 160g do nosso blend, bacon fritinho, queijo cheddar, alface, tomate, cebola roxa e molho secreto.</p>
-          <p class="preco" aria-label="41 reais"><span class="preco__rs">R$</span><span class="preco__int">41</span><span class="preco__cent">,00</span></p>
+        <p class="preco" aria-label="41 reais"><span class="preco__rs">R$</span><span class="preco__int">41</span><span class="preco__cent">,00</span></p>
           <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </li>
-
-      <li class="cartaz oferta" style="--r:1.6deg">
+        <li class="cartaz oferta" style="--r:1.6deg" data-nome="Baconritos">
         <figure class="oferta__foto">
           <span class="fita fita--topo" aria-hidden="true"></span>
           <img src="assets/img/burger-baconritos.webp" width="700" height="467" loading="lazy" alt="Baconritos com Doritos, bacon, cheddar e maionese artesanal">
         </figure>
         <div class="oferta__corpo">
-          <p class="oferta__num pincel" aria-hidden="true">160g</p>
-          <h3 class="oferta__nome">Baconritos</h3>
+        <p class="oferta__num pincel" aria-hidden="true">160g</p>
+        <h4 class="oferta__nome">Baconritos</h4>
           <p class="oferta__chamada pincel">Tem Doritos dentro. Isso mesmo.</p>
           <p class="oferta__desc">Pão artesanal, 160g do nosso blend, bacon, queijo cheddar, alface, cebola roxa, nossa maionese artesanal e Doritos.</p>
-          <p class="preco" aria-label="45 reais"><span class="preco__rs">R$</span><span class="preco__int">45</span><span class="preco__cent">,00</span></p>
+        <p class="preco" aria-label="45 reais"><span class="preco__rs">R$</span><span class="preco__int">45</span><span class="preco__cent">,00</span></p>
           <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </li>
-
-      <li class="cartaz oferta" style="--r:-1.8deg">
+        <li class="cartaz oferta" style="--r:-1.8deg" data-nome="Smash Burguer">
         <figure class="oferta__foto">
           <span class="fita fita--topo" aria-hidden="true"></span>
           <img src="assets/img/burger-smash.webp" width="700" height="467" loading="lazy" alt="Smash Burguer com duas carnes finas, cheddar e alface no pão macio">
         </figure>
         <div class="oferta__corpo">
-          <p class="oferta__num pincel" aria-hidden="true">2×60g</p>
-          <h3 class="oferta__nome">Smash Burguer</h3>
+        <p class="oferta__num pincel" aria-hidden="true">2×60g</p>
+        <h4 class="oferta__nome">Smash Burguer</h4>
           <p class="oferta__chamada pincel">Duas carnes, zero frescura.</p>
           <p class="oferta__desc">Pão artesanal, 2 blends de 60g cada, alface, cebola bem picadinha e nosso molho secreto.</p>
-          <p class="preco" aria-label="37 reais"><span class="preco__rs">R$</span><span class="preco__int">37</span><span class="preco__cent">,00</span></p>
+        <p class="preco" aria-label="37 reais"><span class="preco__rs">R$</span><span class="preco__int">37</span><span class="preco__cent">,00</span></p>
           <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </li>
-
-      <li class="cartaz cartaz--vermelho oferta oferta--perigo" style="--r:1.2deg">
+        <li class="cartaz oferta cartaz--vermelho oferta--perigo" style="--r:1.2deg" data-nome="Danger Burguer">
         <figure class="oferta__foto">
           <span class="fita fita--topo" aria-hidden="true"></span>
           <img src="assets/img/burger-danger.webp" width="700" height="467" loading="lazy" alt="Danger Burguer com duas carnes de 160g, cheddar, bacon e espeto de bambu">
         </figure>
         <div class="oferta__corpo">
-          <p class="oferta__num pincel" aria-hidden="true">2×160g</p>
-          <h3 class="oferta__nome">Danger Burguer</h3>
+        <p class="oferta__num pincel" aria-hidden="true">2×160g</p>
+        <h4 class="oferta__nome">Danger Burguer</h4>
           <p class="oferta__chamada pincel">Perigo: duas carnes de 160g.</p>
           <p class="oferta__desc">Pão, duas carnes de 160g, queijo cheddar, molho secreto e bacon.</p>
-          <p class="preco" aria-label="52 reais"><span class="preco__rs">R$</span><span class="preco__int">52</span><span class="preco__cent">,00</span></p>
+        <p class="preco" aria-label="52 reais"><span class="preco__rs">R$</span><span class="preco__int">52</span><span class="preco__cent">,00</span></p>
           <a class="botao botao--papel" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Encarar esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </li>
-
-      <li class="cartaz oferta" style="--r:-.8deg">
+        <li class="cartaz oferta" style="--r:-.8deg" data-nome="Sweet Onion">
         <figure class="oferta__foto">
           <span class="fita fita--topo" aria-hidden="true"></span>
           <img src="assets/img/burger-sweet-onion.webp" width="700" height="467" loading="lazy" alt="Sweet Onion com cebola caramelizada, cheddar e bacon no pão artesanal">
         </figure>
         <div class="oferta__corpo">
-          <p class="oferta__num pincel" aria-hidden="true">160g</p>
-          <h3 class="oferta__nome">Sweet Onion</h3>
+        <p class="oferta__num pincel" aria-hidden="true">160g</p>
+        <h4 class="oferta__nome">Sweet Onion</h4>
           <p class="oferta__chamada pincel">Cebola caramelizada no ponto.</p>
           <p class="oferta__desc">Pão artesanal, 160g do nosso blend, queijo cheddar, bacon bem fritinho e cebola caramelizada.</p>
-          <p class="preco" aria-label="44 reais"><span class="preco__rs">R$</span><span class="preco__int">44</span><span class="preco__cent">,00</span></p>
+        <p class="preco" aria-label="44 reais"><span class="preco__rs">R$</span><span class="preco__int">44</span><span class="preco__cent">,00</span></p>
           <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </li>
-
-    </ol>
-
-    <header class="secao__cabeca secao__cabeca--sub">
-      <h3 id="titulo-porcoes" class="letreiro-parede letreiro-parede--sub">Pra acompanhar</h3>
-      <p class="pincel secao__nota">Porção pra dividir, shake pra não dividir.</p>
-    </header>
-
-    <ol class="mural mural--porcoes" role="list" aria-labelledby="titulo-porcoes">
-      <li class="cartaz oferta oferta--retrato" style="--r:-1.4deg">
+        <li class="cartaz oferta" style="--r:1.4deg" data-nome="Chicken Burguer">
+        <figure class="oferta__foto">
+          <span class="fita fita--topo" aria-hidden="true"></span>
+          <img src="assets/img/burger-chicken.webp" width="700" height="467" loading="lazy" alt="Chicken Burguer com frango empanado, bacon, alface, cebola roxa e maionese verde no pão artesanal">
+        </figure>
+        <div class="oferta__corpo">
+        <p class="oferta__num pincel" aria-hidden="true">frango</p>
+        <h4 class="oferta__nome">Chicken Burguer</h4>
+          <p class="oferta__chamada pincel">Frango empanado com bacon.</p>
+          <p class="oferta__desc">Nosso pão artesanal, empanado de frango, alface, cebola roxa, maionese de hortelã com iogurte e bacon.</p>
+        <p class="preco" aria-label="38 reais"><span class="preco__rs">R$</span><span class="preco__int">38</span><span class="preco__cent">,00</span></p>
+          <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+        <li class="cartaz oferta oferta--veggie" style="--r:-1.3deg" data-nome="Josyas Burguer">
+        <figure class="oferta__foto">
+          <span class="fita fita--topo" aria-hidden="true"></span>
+          <img src="assets/img/burger-josyas.webp" width="700" height="467" loading="lazy" alt="Josyas Burguer vegetariano com cheddar, alface e cebola roxa no pão artesanal">
+        </figure>
+        <div class="oferta__corpo">
+        <p class="oferta__num pincel" aria-hidden="true">veggie</p>
+        <h4 class="oferta__nome">Josyas Burguer</h4>
+          <p class="oferta__chamada pincel">Vegetariano, sem perder a pegada.</p>
+          <p class="oferta__desc">Pão artesanal, burguer vegetariano, alface, cebola roxa, queijo cheddar e nosso molho secreto.</p>
+        <p class="preco" aria-label="37 reais"><span class="preco__rs">R$</span><span class="preco__int">37</span><span class="preco__cent">,00</span></p>
+          <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+      </ol>
+    </div>
+    <div class="painel" id="painel-porcoes" role="tabpanel" aria-labelledby="aba-porcoes" data-painel="porcoes">
+      <h3 class="painel__titulo">Porções</h3>
+      <p class="pincel painel__dica" aria-hidden="true">arrasta pro lado <svg viewBox="0 0 60 20"><path d="M2 12c16-6 34-6 52-2m0 0-8-6m8 6-9 5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
+      <ol class="mural mural--porcoes" role="list">
+        <li class="cartaz oferta oferta--retrato" style="--r:-1.4deg" data-nome="Batata Cheddar e Bacon">
         <figure class="oferta__foto">
           <span class="fita fita--topo" aria-hidden="true"></span>
           <img src="assets/img/porcao-cheddar-bacon.webp" width="467" height="700" loading="lazy" alt="Batata frita coberta com cheddar cremoso e bacon em cubos, numa tigela preta">
         </figure>
         <div class="oferta__corpo">
-          <p class="oferta__num pincel" aria-hidden="true">serve 2</p>
-          <h4 class="oferta__nome">Batata Cheddar e Bacon</h4>
+        <p class="oferta__num pincel" aria-hidden="true">serve 2</p>
+        <h4 class="oferta__nome">Batata Cheddar e Bacon</h4>
           <p class="oferta__chamada pincel">Cheddar escorrendo, bacon por cima.</p>
           <p class="oferta__desc">Nossa deliciosa batata com cheddar cremoso e bacon. Serve 2 pessoas.</p>
-          <p class="preco" aria-label="39 reais"><span class="preco__rs">R$</span><span class="preco__int">39</span><span class="preco__cent">,00</span></p>
+        <p class="preco" aria-label="39 reais"><span class="preco__rs">R$</span><span class="preco__int">39</span><span class="preco__cent">,00</span></p>
           <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir essa <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </li>
-
-      <li class="cartaz oferta oferta--retrato oferta--salao" style="--r:1.6deg">
+        <li class="cartaz oferta oferta--retrato oferta--salao" style="--r:1.6deg" data-nome="Batata com Costela">
         <figure class="oferta__foto">
           <span class="fita fita--topo" aria-hidden="true"></span>
           <img src="assets/img/porcao-costela.webp" width="467" height="700" loading="lazy" alt="Garfo levantando batata com costela desfiada e Catupiry, sobre tigela cheia">
         </figure>
         <div class="oferta__corpo">
-          <p class="oferta__num pincel" aria-hidden="true">só no salão</p>
-          <h4 class="oferta__nome">Batata com Costela</h4>
+        <p class="oferta__num pincel" aria-hidden="true">só no salão</p>
+        <h4 class="oferta__nome">Batata com Costela</h4>
           <p class="oferta__chamada pincel">Defumada, desfiada e com Catupiry.</p>
           <p class="oferta__desc">Batata frita crocante com costela bovina desfiada e defumada, finalizada com cremoso Catupiry quatro queijos. Disponível somente no salão.</p>
-          <p class="preco" aria-label="42 reais"><span class="preco__rs">R$</span><span class="preco__int">42</span><span class="preco__cent">,00</span></p>
+        <p class="preco" aria-label="42 reais"><span class="preco__rs">R$</span><span class="preco__int">42</span><span class="preco__cent">,00</span></p>
           <a class="botao botao--tinta" href="#onde"><svg class="icone" aria-hidden="true"><use href="#i-pin"/></svg>Vem comer aqui</a>
         </div>
       </li>
-
-      <li class="cartaz oferta oferta--deitada" style="--r:-.8deg">
-        <figure class="oferta__foto">
-          <span class="fita fita--topo" aria-hidden="true"></span>
-          <img src="assets/img/porcao-nuggets.webp" width="700" height="467" loading="lazy" alt="Tigela com nuggets dourados e três potinhos de molho ao lado">
-        </figure>
-        <div class="oferta__corpo">
-          <p class="oferta__num pincel" aria-hidden="true">10 un.</p>
-          <h4 class="oferta__nome">Nuggets</h4>
-          <p class="oferta__chamada pincel">Dez nuggets e molho pra afundar.</p>
-          <p class="oferta__desc">Acompanha molho secreto ou maionese verde.</p>
-          <p class="preco" aria-label="26 reais"><span class="preco__rs">R$</span><span class="preco__int">26</span><span class="preco__cent">,00</span></p>
-          <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esses <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        </div>
-      </li>
-
-      <li class="cartaz oferta oferta--retrato" style="--r:1.1deg">
+        <li class="cartaz oferta oferta--retrato" style="--r:1.1deg" data-nome="Batata Simples">
         <figure class="oferta__foto">
           <span class="fita fita--topo" aria-hidden="true"></span>
           <img src="assets/img/porcao-batata.webp" width="466" height="700" loading="lazy" alt="Tigela de batata frita sequinha com dois potinhos de maionese">
         </figure>
         <div class="oferta__corpo">
-          <p class="oferta__num pincel" aria-hidden="true">serve 2</p>
-          <h4 class="oferta__nome">Batata Simples</h4>
+        <p class="oferta__num pincel" aria-hidden="true">serve 2</p>
+        <h4 class="oferta__nome">Batata Simples</h4>
           <p class="oferta__chamada pincel">Sequinha e no capricho.</p>
           <p class="oferta__desc">Nossa deliciosa batata, serve 2 pessoas. Acompanha maionese artesanal.</p>
-          <p class="preco" aria-label="26 reais"><span class="preco__rs">R$</span><span class="preco__int">26</span><span class="preco__cent">,00</span></p>
+        <p class="preco" aria-label="26 reais"><span class="preco__rs">R$</span><span class="preco__int">26</span><span class="preco__cent">,00</span></p>
           <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir essa <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </li>
-
-      <li class="cartaz oferta oferta--retrato cartaz--vermelho oferta--shake" style="--r:-1.2deg">
+        <li class="cartaz oferta oferta--deitada" style="--r:-.8deg" data-nome="Nuggets">
+        <figure class="oferta__foto">
+          <span class="fita fita--topo" aria-hidden="true"></span>
+          <img src="assets/img/porcao-nuggets.webp" width="700" height="467" loading="lazy" alt="Tigela com nuggets dourados e três potinhos de molho ao lado">
+        </figure>
+        <div class="oferta__corpo">
+        <p class="oferta__num pincel" aria-hidden="true">10 un.</p>
+        <h4 class="oferta__nome">Nuggets</h4>
+          <p class="oferta__chamada pincel">Dez nuggets e molho pra afundar.</p>
+          <p class="oferta__desc">Acompanha molho secreto ou maionese verde.</p>
+        <p class="preco" aria-label="26 reais"><span class="preco__rs">R$</span><span class="preco__int">26</span><span class="preco__cent">,00</span></p>
+          <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esses <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+      </ol>
+    </div>
+    <div class="painel" id="painel-shakes" role="tabpanel" aria-labelledby="aba-shakes" data-painel="shakes">
+      <h3 class="painel__titulo">Shakes</h3>
+      <p class="pincel painel__dica" aria-hidden="true">arrasta pro lado <svg viewBox="0 0 60 20"><path d="M2 12c16-6 34-6 52-2m0 0-8-6m8 6-9 5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></p>
+      <ol class="mural mural--shakes" role="list">
+        <li class="cartaz oferta oferta--retrato cartaz--vermelho" style="--r:-1.2deg" data-nome="Milk Shake Ovomaltine">
         <figure class="oferta__foto">
           <span class="fita fita--topo" aria-hidden="true"></span>
           <img src="assets/img/shake-ovomaltine.webp" width="467" height="700" loading="lazy" alt="Milk shake de Ovomaltine em taça alta com calda de chocolate e Ovomaltine por cima">
@@ -317,20 +373,24 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <a class="botao botao--papel" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </li>
-
-      <li class="cartaz oferta oferta--mais" style="--r:.6deg">
+        <li class="cartaz oferta oferta--retrato" style="--r:1.5deg" data-nome="Milk Shake Morango">
         <figure class="oferta__foto">
-          <span class="fita fita--e" aria-hidden="true"></span>
-          <span class="fita fita--d" aria-hidden="true"></span>
-          <img src="assets/img/mesa-bandejas.webp" width="1379" height="619" loading="lazy" alt="Mesa vista de cima com bandejas de hambúrguer, batata frita com cheddar e bacon, nuggets e molhos">
+          <span class="fita fita--topo" aria-hidden="true"></span>
+          <img src="assets/img/shake-morango.webp" width="467" height="700" loading="lazy" alt="Milk shake de morango em taça alta com calda vermelha escorrendo">
         </figure>
         <div class="oferta__corpo">
-          <h3 class="oferta__nome">E tem mais</h3>
-          <p class="oferta__desc">Bebidas e o resto do cardápio tão no Saipos, com preço atualizado.</p>
-          <a class="botao botao--tinta" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Ver cardápio completo <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <h4 class="oferta__nome">Milk Shake Morango</h4>
+          <p class="oferta__chamada pincel">Calda de morango até a borda.</p>
+          <p class="preco" aria-label="17 reais"><span class="preco__rs">R$</span><span class="preco__int">17</span><span class="preco__cent">,00</span></p>
+          <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </li>
-    </ol>
+      </ol>
+    </div>
+
+    <p class="cardapio__completo">
+      <a class="botao botao--tinta" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Ver o cardápio completo no Saipos <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </p>
   </section>
 
   <!-- A CASA -->
@@ -343,7 +403,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <div class="cartaz casa__texto" style="--r:-1.2deg">
         <span class="fita fita--e" aria-hidden="true"></span>
         <p class="casa__abre">Não é só delivery.</p>
-        <p>Galpão grande de parede preta, estante lotada de livro, quadro na parede, planta pra todo lado, mezanino e mesa de sinuca.</p>
+        <p>Galpão grande de parede preta, estante lotada de livro, quadro na parede, planta pra todo lado, banco de praça, mezanino e mesa de sinuca.</p>
         <p class="pincel casa__convite">Senta, pede e fica à vontade.</p>
       </div>
 
@@ -355,8 +415,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
       <figure class="foto-colada casa__foto casa__foto--b" style="--r:-2.4deg">
         <span class="fita fita--topo" aria-hidden="true"></span>
-        <img src="assets/img/casa-estante.webp" width="525" height="851" loading="lazy" alt="Estante cheia de livros e bonecos, grama sintética e plantas, com quadros de personalidades no mezanino">
-        <figcaption class="pincel">a estante</figcaption>
+        <img src="assets/img/casa-praca.webp" width="703" height="820" loading="lazy" alt="Cantinho com banco de praça, plantas e estante de livros, embaixo da placa Praça Sérgio Vaz e de quadros de personalidades negras">
+        <figcaption class="pincel">a Praça Sérgio Vaz</figcaption>
       </figure>
     </div>
   </section>

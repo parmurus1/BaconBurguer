@@ -91,36 +91,124 @@
 
   /* ---------- Cartazes sendo colados na parede ---------- */
 
-  const colaveis = document.querySelectorAll(".mural > .cartaz, .casa__grade > *, .onde__grade > *");
+  const temObserver = "IntersectionObserver" in window;
 
-  if ("IntersectionObserver" in window) {
-    const alturaTela = window.innerHeight;
-    const pendentes = [];
+  function terminaColagem(el, i) {
+    setTimeout(() => {
+      el.classList.remove("colou");
+      el.style.removeProperty("--i");
+    }, 1400 + i * 90);
+  }
 
-    colaveis.forEach((el) => {
-      // só esconde o que ainda está abaixo da dobra: o que já está à vista fica à vista
-      if (el.getBoundingClientRect().top > alturaTela * 0.92) {
-        el.classList.add("vai-colar");
-        pendentes.push(el);
+  function cola(el, i) {
+    el.style.setProperty("--i", i);
+    el.classList.add("colou");
+    el.classList.remove("vai-colar");
+    terminaColagem(el, i);
+  }
+
+  const obsColagem = temObserver
+    ? new IntersectionObserver((entradas) => {
+        entradas.filter((e) => e.isIntersecting).forEach((e, i) => {
+          obsColagem.unobserve(e.target);
+          cola(e.target, i);
+        });
+      }, { rootMargin: "0px 0px -12% 0px", threshold: 0.08 })
+    : null;
+
+  // cola de novo um grupo de cartazes (ao trocar de aba)
+  function recola(cartazes) {
+    if (!temObserver) return;
+    cartazes.forEach((el) => {
+      el.classList.remove("colou");
+      el.classList.add("vai-colar");
+    });
+    void document.body.offsetWidth;
+    cartazes.forEach((el) => obsColagem.observe(el));
+  }
+
+  /* ---------- Abas do cardápio ---------- */
+
+  const abas = [...document.querySelectorAll("[data-aba]")];
+  const paineis = [...document.querySelectorAll("[data-painel]")];
+
+  function mostraAba(nome, { foco = false, colar = true } = {}) {
+    abas.forEach((aba) => {
+      const ativa = aba.dataset.aba === nome;
+      aba.setAttribute("aria-selected", String(ativa));
+      aba.tabIndex = ativa ? 0 : -1;
+      if (ativa && foco) aba.focus();
+    });
+    paineis.forEach((painel) => {
+      const ativo = painel.dataset.painel === nome;
+      painel.hidden = !ativo;
+      if (ativo) {
+        const mural = painel.querySelector(".mural");
+        if (mural) mural.scrollLeft = 0;
+        if (colar) recola([...painel.querySelectorAll(".mural > .cartaz")]);
       }
     });
+  }
 
-    const obs = new IntersectionObserver((entradas) => {
-      const visiveis = entradas.filter((e) => e.isIntersecting);
-      visiveis.forEach((e, i) => {
-        const el = e.target;
-        el.style.setProperty("--i", i);
-        el.classList.add("colou");
-        el.classList.remove("vai-colar");
-        obs.unobserve(el);
-        setTimeout(() => {
-          el.classList.remove("colou");
-          el.style.removeProperty("--i");
-        }, 1400 + i * 90);
+  if (abas.length && paineis.length) {
+    mostraAba("lanches", { colar: false });
+    abas.forEach((aba, i) => {
+      aba.addEventListener("click", () => mostraAba(aba.dataset.aba));
+      aba.addEventListener("keydown", (e) => {
+        const passo = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+        if (e.key === "Home" || e.key === "End" || passo) {
+          e.preventDefault();
+          const destino = e.key === "Home" ? 0 : e.key === "End" ? abas.length - 1 : (i + passo + abas.length) % abas.length;
+          mostraAba(abas[destino].dataset.aba, { foco: true });
+        }
       });
-    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.08 });
+    });
+  }
 
-    pendentes.forEach((el) => obs.observe(el));
+  /* cartazes abaixo da dobra esperam a pessoa chegar neles; os de uma fileira
+     de arrastar (celular) colam conforme vão entrando na tela */
+  if (temObserver) {
+    const alturaTela = window.innerHeight;
+    const larguraTela = window.innerWidth;
+    document.querySelectorAll(".mural > .cartaz, .casa__grade > *, .onde__grade > *").forEach((el) => {
+      if (el.closest("[hidden]")) return;
+      const r = el.getBoundingClientRect();
+      if (r.top > alturaTela * 0.92 || r.left > larguraTela) {
+        el.classList.add("vai-colar");
+        obsColagem.observe(el);
+      }
+    });
+  }
+
+  /* ---------- Deixa o porco escolher ---------- */
+
+  const botaoSorteio = document.querySelector("[data-sorteio]");
+  const msgSorteio = document.querySelector("[data-sorteio-msg]");
+  let ultimoEscolhido = null;
+
+  if (botaoSorteio) {
+    botaoSorteio.addEventListener("click", () => {
+      if (botaoSorteio.classList.contains("is-sorteando")) return;
+      const opcoes = [...document.querySelectorAll(".mural > .oferta:not(.oferta--salao)")].filter((el) => el !== ultimoEscolhido);
+      const escolhido = opcoes[Math.floor(Math.random() * opcoes.length)];
+      if (!escolhido) return;
+
+      document.querySelectorAll(".oferta.is-escolhido").forEach((el) => el.classList.remove("is-escolhido"));
+      botaoSorteio.classList.add("is-sorteando");
+      botaoSorteio.setAttribute("aria-busy", "true");
+
+      setTimeout(() => {
+        botaoSorteio.classList.remove("is-sorteando");
+        botaoSorteio.removeAttribute("aria-busy");
+        const painel = escolhido.closest("[data-painel]");
+        if (painel && painel.hidden) mostraAba(painel.dataset.painel, { colar: false });
+        escolhido.classList.remove("vai-colar");
+        escolhido.scrollIntoView({ behavior: reduzMovimento ? "auto" : "smooth", block: "center", inline: "center" });
+        escolhido.classList.add("is-escolhido");
+        ultimoEscolhido = escolhido;
+        if (msgSorteio) msgSorteio.textContent = `O porco escolheu: ${escolhido.dataset.nome}.`;
+      }, reduzMovimento ? 0 : 750);
+    });
   }
 
   /* ---------- Barra de pedido no celular ---------- */
