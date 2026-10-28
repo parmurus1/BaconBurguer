@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T17:05:05Z",
+  "title": "Design System: Bacon Burguer",
+  "extensions": {
+    "colorMeta": {
+      "parede": {
+        "role": "neutral",
+        "displayName": "Plank Black",
+        "canonical": "oklch(15.1% 0.002 17.3)",
+        "tonalRamp": [
+          "oklch(15% 0.002 17.3)",
+          "oklch(25% 0.002 17.3)",
+          "oklch(35% 0.002 17.3)",
+          "oklch(45% 0.002 17.3)",
+          "oklch(55% 0.002 17.3)",
+          "oklch(68% 0.002 17.3)",
+          "oklch(82% 0.002 17.3)",
+          "oklch(95% 0.002 17.3)"
+        ]
+      },
+      "papel": {
+        "role": "neutral",
+        "displayName": "Poster Paper",
+        "canonical": "oklch(96.7% 0.007 88.6)",
+        "tonalRamp": [
+          "oklch(15% 0.007 88.6)",
+          "oklch(25% 0.007 88.6)",
+          "oklch(35% 0.007 88.6)",
+          "oklch(45% 0.007 88.6)",
+          "oklch(55% 0.007 88.6)",
+          "oklch(68% 0.007 88.6)",
+          "oklch(82% 0.007 88.6)",
+          "oklch(95% 0.007 88.6)"
+        ]
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Brush Ink",
+        "canonical": "oklch(18.1% 0.005 17.6)",
+        "tonalRamp": [
+          "oklch(15% 0.005 17.6)",
+          "oklch(25% 0.005 17.6)",
+          "oklch(35% 0.005 17.6)",
+          "oklch(45% 0.005 17.6)",
+          "oklch(55% 0.005 17.6)",
+          "oklch(68% 0.005 17.6)",
+          "oklch(82% 0.005 17.6)",
+          "oklch(95% 0.005 17.6)"
+        ]
+      },
+      "tinta-2": {
+        "role": "neutral",
+        "displayName": "Faded Ink",
+        "canonical": "oklch(33.2% 0.010 27.4)",
+        "tonalRamp": [
+          "oklch(15% 0.010 27.4)",
+          "oklch(25% 0.010 27.4)",
+          "oklch(35% 0.010 27.4)",
+          "oklch(45% 0.010 27.4)",
+          "oklch(55% 0.010 27.4)",
+          "oklch(68% 0.010 27.4)",
+          "oklch(82% 0.010 27.4)",
+          "oklch(95% 0.010 27.4)"
+        ]
+      },
+      "vermelho": {
+        "role": "primary",
+        "displayName": "Sign-Painter Red",
+        "canonical": "oklch(55.4% 0.217 27.4)",
+        "tonalRamp": [
+          "oklch(15% 0.217 27.4)",
+          "oklch(25% 0.217 27.4)",
+          "oklch(35% 0.217 27.4)",
+          "oklch(45% 0.217 27.4)",
+          "oklch(55% 0.217 27.4)",
+          "oklch(68% 0.217 27.4)",
+          "oklch(82% 0.217 27.4)",
+          "oklch(95% 0.217 27.4)"
+        ]
+      },
+      "vermelho-escuro": {
+        "role": "primary",
+        "displayName": "Dried Red",
+        "canonical": "oklch(45.1% 0.177 27.3)",
+        "tonalRamp": [
+          "oklch(15% 0.177 27.3)",
+          "oklch(25% 0.177 27.3)",
+          "oklch(35% 0.177 27.3)",
+          "oklch(45% 0.177 27.3)",
+          "oklch(55% 0.177 27.3)",
+          "oklch(68% 0.177 27.3)",
+          "oklch(82% 0.177 27.3)",
+          "oklch(95% 0.177 27.3)"
+        ]
+      },
+      "vermelho-vivo": {
+        "role": "primary",
+        "displayName": "Neon Brush Red",
+        "canonical": "oklch(66.8% 0.219 28.6)",
+        "tonalRamp": [
+          "oklch(15% 0.219 28.6)",
+          "oklch(25% 0.219 28.6)",
+          "oklch(35% 0.219 28.6)",
+          "oklch(45% 0.219 28.6)",
+          "oklch(55% 0.219 28.6)",
+          "oklch(68% 0.219 28.6)",
+          "oklch(82% 0.219 28.6)",
+          "oklch(95% 0.219 28.6)"
+        ]
+      },
+      "fita": {
+        "role": "neutral",
+        "displayName": "Masking Tape",
+        "canonical": "rgba(226, 211, 170, .86)",
+        "tonalRamp": [
+          "oklch(15% 0.057 90.3)",
+          "oklch(25% 0.057 90.3)",
+          "oklch(35% 0.057 90.3)",
+          "oklch(45% 0.057 90.3)",
+          "oklch(55% 0.057 90.3)",
+          "oklch(68% 0.057 90.3)",
+          "oklch(82% 0.057 90.3)",
+          "oklch(95% 0.057 90.3)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Letreiro Display",
+        "purpose": "The house name on the opening poster; red slab with ink painted shade, one word per line."
+      },
+      "headline": {
+        "displayName": "Wall Headline",
+        "purpose": "Section titles painted on the wall in paper white with a red shade; the closing line."
+      },
+      "title": {
+        "displayName": "Poster Title",
+        "purpose": "Burger names and poster titles; uppercase slab with painted shade."
+      },
+      "price": {
+        "displayName": "Poster Price",
+        "purpose": "Brush integer of a price; paired with small R$ and raised underlined cents."
+      },
+      "brush": {
+        "displayName": "Brush Note",
+        "purpose": "Taglines, captions, hours, asides and badges in fat marker."
+      },
+      "body": {
+        "displayName": "Fine Print",
+        "purpose": "Descriptions (max 42ch) and running text in Archivo."
+      },
+      "label": {
+        "displayName": "Sign Label",
+        "purpose": "Buttons, nav links and day names: Archivo 750-800, condensed, uppercase, tracked."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sombra-papel",
+        "value": "0 1px 1px rgba(0, 0, 0, .45), 0 14px 28px -10px rgba(0, 0, 0, .75)",
+        "purpose": "Pasted paper at rest: every poster and taped photo."
+      },
+      {
+        "name": "sombra-solta",
+        "value": "0 2px 3px rgba(0, 0, 0, .4), 0 34px 50px -18px rgba(0, 0, 0, .85)",
+        "purpose": "Lifted paper: menu poster hover and posters mid-paste."
+      },
+      {
+        "name": "placa",
+        "value": "0 10px 18px -6px rgba(0, 0, 0, .8)",
+        "purpose": "The hanging ABERTO/FECHADO sign."
+      },
+      {
+        "name": "faixa",
+        "value": "0 18px 30px -14px rgba(0, 0, 0, .8)",
+        "purpose": "Under the scrolling red banner."
+      },
+      {
+        "name": "adesivo",
+        "value": "drop-shadow(0 10px 14px rgba(0, 0, 0, .6))",
+        "purpose": "Filter shadow for stickers (offer burst)."
+      },
+      {
+        "name": "sombra-pintada",
+        "value": "text-shadow: .055em .055em 0 var(--tinta)",
+        "purpose": "Sign painter's hard drop shade on slab lettering only (ink under red, red under paper/ink; 0.05-0.06em)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-colar",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "The paste ease: every hover, settle and slide in the system."
+      },
+      {
+        "name": "colar",
+        "value": "opacity .22s linear; transform .75s ease-colar; 90ms stagger; tape +380ms",
+        "purpose": "Posters below the fold arrive rotated (3x tilt + 4deg), 28px high, 6% large, and settle; tape lands after."
+      },
+      {
+        "name": "hover-botao",
+        "value": "transform .25s ease-colar; translateY(-2px) rotate(-1deg)",
+        "purpose": "Button lift and tilt; arrow nudges 2px right."
+      },
+      {
+        "name": "hover-cartaz",
+        "value": "transform/box-shadow .5s ease-colar; rotate(r * .3) translateY(-5px)",
+        "purpose": "Menu poster straightens and lifts on hover."
+      },
+      {
+        "name": "balanco",
+        "value": "1.8s ease-colar, damped 11deg to 0",
+        "purpose": "Hanging sign swings when its status updates."
+      },
+      {
+        "name": "faixa",
+        "value": "38s linear infinite translateX(-50%)",
+        "purpose": "Scrolling banner loop."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animations off, transitions .01ms",
+        "purpose": "Posters render settled; banner stops."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "760px"
+      },
+      {
+        "name": "lg",
+        "value": "960px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão Vermelho",
+      "kind": "button",
+      "refersTo": "botao-vermelho",
+      "description": "Primary order action (every Saipos link): red sign button with ink border.",
+      "html": "<a class=\"ds-botao ds-botao--vermelho\" href=\"#\">Pedir no Saipos <svg class=\"ds-icone\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-botao { display: inline-flex; align-items: center; justify-content: center; gap: .55em; min-height: 48px; padding: .7em 1.2em; border: 3px solid var(--tinta, #141111); border-radius: 5px 3px 6px 3px; font-family: var(--f-corpo, Archivo, system-ui, sans-serif); font-weight: 800; font-stretch: 82%; font-size: 1rem; line-height: 1.1; letter-spacing: .03em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: transform .25s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)), background-color .2s, color .2s; } .ds-botao .ds-icone { width: 1.25em; height: 1.25em; transition: transform .25s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)); } .ds-botao:hover { transform: translateY(-2px) rotate(-1deg); } .ds-botao:hover .ds-icone { transform: translateX(2px); } .ds-botao:active { transform: translateY(1px); } .ds-botao:focus-visible { outline: 3px solid var(--vermelho-vivo, #ff4a3d); outline-offset: 3px; } .ds-botao--vermelho { background: var(--vermelho, #d4161c); color: #fff; } .ds-botao--vermelho:hover { background: var(--vermelho-escuro, #a10e13); }"
+    },
+    {
+      "name": "Botão Tinta",
+      "kind": "button",
+      "refersTo": "botao-tinta",
+      "description": "Secondary action on paper (Keeta, full menu): ink fill, paper text.",
+      "html": "<a class=\"ds-botao ds-botao--tinta\" href=\"#\">Pedir no Keeta <svg class=\"ds-icone\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-botao { display: inline-flex; align-items: center; justify-content: center; gap: .55em; min-height: 48px; padding: .7em 1.2em; border: 3px solid var(--tinta, #141111); border-radius: 5px 3px 6px 3px; font-family: var(--f-corpo, Archivo, system-ui, sans-serif); font-weight: 800; font-stretch: 82%; font-size: 1rem; line-height: 1.1; letter-spacing: .03em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: transform .25s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)), background-color .2s, color .2s; } .ds-botao .ds-icone { width: 1.25em; height: 1.25em; transition: transform .25s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)); } .ds-botao:hover { transform: translateY(-2px) rotate(-1deg); } .ds-botao:hover .ds-icone { transform: translateX(2px); } .ds-botao:active { transform: translateY(1px); } .ds-botao:focus-visible { outline: 3px solid var(--vermelho-vivo, #ff4a3d); outline-offset: 3px; } .ds-botao--tinta { background: var(--tinta, #141111); color: var(--papel, #f6f4ef); } .ds-botao--tinta:hover { background: #2a2423; }"
+    },
+    {
+      "name": "Botão Papel",
+      "kind": "button",
+      "refersTo": "botao-papel",
+      "description": "Action on red or on the black wall: paper fill, ink text.",
+      "html": "<div class=\"ds-parede\"><a class=\"ds-botao ds-botao--papel\" href=\"#\">Encarar esse <svg class=\"ds-icone\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></div>",
+      "css": ".ds-parede { background: var(--parede, #0c0b0b); padding: 40px 32px; } .ds-botao { display: inline-flex; align-items: center; justify-content: center; gap: .55em; min-height: 48px; padding: .7em 1.2em; border: 3px solid var(--tinta, #141111); border-radius: 5px 3px 6px 3px; font-family: var(--f-corpo, Archivo, system-ui, sans-serif); font-weight: 800; font-stretch: 82%; font-size: 1rem; line-height: 1.1; letter-spacing: .03em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: transform .25s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)), background-color .2s, color .2s; } .ds-botao .ds-icone { width: 1.25em; height: 1.25em; transition: transform .25s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)); } .ds-botao:hover { transform: translateY(-2px) rotate(-1deg); } .ds-botao:hover .ds-icone { transform: translateX(2px); } .ds-botao:active { transform: translateY(1px); } .ds-botao:focus-visible { outline: 3px solid var(--vermelho-vivo, #ff4a3d); outline-offset: 3px; } .ds-botao--papel { background: var(--papel, #f6f4ef); color: var(--tinta, #141111); } .ds-botao--papel:hover { background: #fff; }"
+    },
+    {
+      "name": "Cartaz de Oferta",
+      "kind": "card",
+      "refersTo": "cartaz",
+      "description": "Menu poster: taped photo, gramatura badge, slab name with red shade, brush tagline, fine print, poster price, order button.",
+      "html": "<div class=\"ds-parede\"><article class=\"ds-cartaz\" style=\"--r:-1.2deg\"><div class=\"ds-cartaz__foto\"><span class=\"ds-fita ds-fita--topo\"></span><div class=\"ds-cartaz__img\"></div><span class=\"ds-selo\">160g</span></div><h3 class=\"ds-cartaz__nome\">Bacon Burguer</h3><p class=\"ds-cartaz__chamada\">O que dá nome à casa.</p><p class=\"ds-cartaz__desc\">Pão artesanal, 160g do nosso blend, bacon fritinho e queijo cheddar.</p><p class=\"ds-preco\" aria-label=\"41 reais\"><span class=\"ds-preco__rs\">R$</span><span class=\"ds-preco__int\">41</span><span class=\"ds-preco__cent\">,00</span></p></article></div>",
+      "css": ".ds-parede { background: var(--parede, #0c0b0b); padding: 40px 32px; } .ds-fita { position: absolute; z-index: 3; width: 104px; height: 30px; pointer-events: none; background: repeating-linear-gradient(90deg, rgba(255,255,255,.12) 0 2px, transparent 2px 7px), var(--fita, rgba(226,211,170,.86)); clip-path: polygon(3% 0, 97% 0, 100% 18%, 96% 36%, 100% 54%, 96% 72%, 100% 90%, 97% 100%, 3% 100%, 0 84%, 4% 66%, 0 48%, 4% 30%, 0 12%); } .ds-fita--e { top: -13px; left: 14px; transform: rotate(-9deg); } .ds-fita--d { top: -13px; right: 14px; transform: rotate(8deg); } .ds-fita--topo { top: -15px; left: 50%; transform: translateX(-50%) rotate(-3deg); } .ds-cartaz { position: relative; max-width: 340px; padding: 14px 14px 1.5rem; color: var(--tinta, #141111); background-color: var(--papel, #f6f4ef); background-image: radial-gradient(120% 80% at 15% 0%, rgba(255,255,255,.55), transparent 55%), linear-gradient(172deg, transparent 62%, rgba(0,0,0,.035) 62.4%, transparent 64%), linear-gradient(8deg, transparent 30%, rgba(0,0,0,.03) 30.3%, transparent 32%); border-radius: 2px 3px 2px 4px; box-shadow: var(--sombra-papel, 0 1px 1px rgba(0,0,0,.45), 0 14px 28px -10px rgba(0,0,0,.75)); transform: rotate(var(--r, 0deg)); transition: transform .5s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)), box-shadow .5s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)); } .ds-cartaz:hover { transform: rotate(calc(var(--r, 0deg) * .3)) translateY(-5px); box-shadow: var(--sombra-solta, 0 2px 3px rgba(0,0,0,.4), 0 34px 50px -18px rgba(0,0,0,.85)); } .ds-cartaz__foto { position: relative; } .ds-cartaz__img { aspect-ratio: 3 / 2; border-radius: 1px; background: linear-gradient(160deg, #2b2321, #0c0b0b); } .ds-selo { position: absolute; top: 4px; right: 6px; display: grid; place-items: center; min-width: 3.6rem; height: 3.6rem; padding: 0 .55rem; border-radius: 1.8rem; background: var(--vermelho, #d4161c); color: #fff; font-family: var(--f-pincel, \"Permanent Marker\", cursive); font-size: 1.15rem; line-height: 1; transform: rotate(9deg); box-shadow: 0 6px 12px -4px rgba(0,0,0,.6); } .ds-cartaz__nome { margin: 1.1rem .5rem 0; font-family: var(--f-letreiro, \"Alfa Slab One\", serif); font-weight: 400; text-transform: uppercase; font-size: 2.1rem; line-height: .95; color: var(--tinta, #141111); text-shadow: .05em .05em 0 rgba(212,22,28,.9); } .ds-cartaz__chamada { margin: .45rem .5rem 0; font-family: var(--f-pincel, \"Permanent Marker\", cursive); font-size: 1.2rem; line-height: 1.25; color: var(--vermelho, #d4161c); } .ds-cartaz__desc { margin: .65rem .5rem 0; max-width: 42ch; font-family: var(--f-corpo, Archivo, system-ui, sans-serif); font-size: 1rem; line-height: 1.5; color: var(--tinta-2, #3b3433); } .ds-preco { display: flex; align-items: flex-start; margin: 1rem .5rem 0; font-family: var(--f-pincel, \"Permanent Marker\", cursive); color: var(--vermelho, #d4161c); line-height: .8; } .ds-preco__rs { font-size: 1.35rem; margin: .35rem .3rem 0 0; } .ds-preco__int { font-size: 4.5rem; letter-spacing: -.02em; } .ds-preco__cent { font-size: 1.7rem; margin: .15rem 0 0 .1rem; padding-bottom: .25rem; border-bottom: 3px solid currentColor; }"
+    },
+    {
+      "name": "Cartaz Vermelho",
+      "kind": "card",
+      "refersTo": "cartaz-vermelho",
+      "description": "The one red poster per wall: every ink inverts to paper; badge goes ink.",
+      "html": "<div class=\"ds-parede\"><article class=\"ds-cartaz-v\" style=\"--r:1.2deg\"><span class=\"ds-fita ds-fita--topo\"></span><h3 class=\"ds-cartaz-v__nome\">Danger Burguer</h3><p class=\"ds-cartaz-v__chamada\">Perigo: duas carnes de 160g.</p><p class=\"ds-cartaz-v__desc\">Pão, duas carnes de 160g, queijo cheddar, molho secreto e bacon.</p></article></div>",
+      "css": ".ds-parede { background: var(--parede, #0c0b0b); padding: 40px 32px; } .ds-fita { position: absolute; z-index: 3; width: 104px; height: 30px; pointer-events: none; background: repeating-linear-gradient(90deg, rgba(255,255,255,.12) 0 2px, transparent 2px 7px), var(--fita, rgba(226,211,170,.86)); clip-path: polygon(3% 0, 97% 0, 100% 18%, 96% 36%, 100% 54%, 96% 72%, 100% 90%, 97% 100%, 3% 100%, 0 84%, 4% 66%, 0 48%, 4% 30%, 0 12%); } .ds-fita--e { top: -13px; left: 14px; transform: rotate(-9deg); } .ds-fita--d { top: -13px; right: 14px; transform: rotate(8deg); } .ds-fita--topo { top: -15px; left: 50%; transform: translateX(-50%) rotate(-3deg); } .ds-cartaz-v { position: relative; max-width: 340px; padding: 2rem 1.5rem 1.75rem; background: var(--vermelho, #d4161c); background-image: radial-gradient(120% 80% at 15% 0%, rgba(255,255,255,.14), transparent 55%); color: var(--papel, #f6f4ef); border-radius: 2px 3px 2px 4px; box-shadow: var(--sombra-papel, 0 1px 1px rgba(0,0,0,.45), 0 14px 28px -10px rgba(0,0,0,.75)); transform: rotate(var(--r, 0deg)); transition: transform .5s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)), box-shadow .5s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)); } .ds-cartaz-v:hover { transform: rotate(calc(var(--r, 0deg) * .3)) translateY(-5px); box-shadow: var(--sombra-solta, 0 2px 3px rgba(0,0,0,.4), 0 34px 50px -18px rgba(0,0,0,.85)); } .ds-cartaz-v__nome { margin: 0; font-family: var(--f-letreiro, \"Alfa Slab One\", serif); font-weight: 400; text-transform: uppercase; font-size: 2.1rem; line-height: .95; text-shadow: .05em .05em 0 var(--tinta, #141111); } .ds-cartaz-v__chamada { margin: .45rem 0 0; font-family: var(--f-pincel, \"Permanent Marker\", cursive); font-size: 1.2rem; line-height: 1.25; } .ds-cartaz-v__desc { margin: .65rem 0 0; font-family: var(--f-corpo, Archivo, system-ui, sans-serif); font-size: 1rem; line-height: 1.5; color: #fff; }"
+    },
+    {
+      "name": "Foto Colada",
+      "kind": "custom",
+      "refersTo": "foto-colada",
+      "description": "A photo mounted on paper with an open bottom border, centred tape and a brush caption.",
+      "html": "<div class=\"ds-parede\"><figure class=\"ds-foto\" style=\"--r:2deg\"><span class=\"ds-fita ds-fita--topo\"></span><div class=\"ds-foto__img\"></div><figcaption>a sinuca</figcaption></figure></div>",
+      "css": ".ds-parede { background: var(--parede, #0c0b0b); padding: 40px 32px; } .ds-fita { position: absolute; z-index: 3; width: 104px; height: 30px; pointer-events: none; background: repeating-linear-gradient(90deg, rgba(255,255,255,.12) 0 2px, transparent 2px 7px), var(--fita, rgba(226,211,170,.86)); clip-path: polygon(3% 0, 97% 0, 100% 18%, 96% 36%, 100% 54%, 96% 72%, 100% 90%, 97% 100%, 3% 100%, 0 84%, 4% 66%, 0 48%, 4% 30%, 0 12%); } .ds-fita--e { top: -13px; left: 14px; transform: rotate(-9deg); } .ds-fita--d { top: -13px; right: 14px; transform: rotate(8deg); } .ds-fita--topo { top: -15px; left: 50%; transform: translateX(-50%) rotate(-3deg); } .ds-foto { position: relative; max-width: 260px; margin: 0; padding: 10px 10px 0; background: var(--papel, #f6f4ef); box-shadow: var(--sombra-papel, 0 1px 1px rgba(0,0,0,.45), 0 14px 28px -10px rgba(0,0,0,.75)); transform: rotate(var(--r, 0deg)); } .ds-foto__img { aspect-ratio: 3 / 4; background: linear-gradient(170deg, #3a2f2a, #0c0b0b); } .ds-foto figcaption { padding: .6rem .5rem .75rem; text-align: center; font-family: var(--f-pincel, \"Permanent Marker\", cursive); font-size: 1.15rem; line-height: 1.2; color: var(--tinta, #141111); }"
+    },
+    {
+      "name": "Placa Aberto/Fechado",
+      "kind": "custom",
+      "refersTo": "placa",
+      "description": "Hanging status sign on a wire; red border and word when open; swings on update.",
+      "html": "<div class=\"ds-parede\"><a class=\"ds-placa\" href=\"#\" data-state=\"aberto\"><span class=\"ds-placa__fio\"></span><span class=\"ds-placa__corpo\"><span class=\"ds-placa__estado\">Aberto</span><span class=\"ds-placa__detalhe\">até 23h45</span></span></a></div>",
+      "css": ".ds-parede { background: var(--parede, #0c0b0b); padding: 40px 32px; } .ds-placa { display: inline-flex; flex-direction: column; align-items: center; text-decoration: none; transform-origin: 50% 0; animation: ds-balanco 1.8s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)) both; } .ds-placa__fio { position: relative; width: 58px; height: 22px; background: linear-gradient(to top left, transparent calc(50% - 1px), #a39d94 50%, transparent calc(50% + 1px)) left / 50% 100% no-repeat, linear-gradient(to top right, transparent calc(50% - 1px), #a39d94 50%, transparent calc(50% + 1px)) right / 50% 100% no-repeat; } .ds-placa__fio::before { content: \"\"; position: absolute; top: -3px; left: 50%; width: 7px; height: 7px; margin-left: -3.5px; border-radius: 50%; background: #7d776f; } .ds-placa__corpo { display: flex; flex-direction: column; align-items: center; min-width: 108px; padding: .3rem .7rem .35rem; background: var(--papel, #f6f4ef); color: var(--tinta, #141111); border: 3px solid var(--tinta, #141111); outline: 2px solid var(--papel, #f6f4ef); border-radius: 4px; box-shadow: 0 10px 18px -6px rgba(0,0,0,.8); } .ds-placa__estado { font-family: var(--f-letreiro, \"Alfa Slab One\", serif); text-transform: uppercase; font-size: .95rem; line-height: 1.1; } .ds-placa__detalhe { font-family: var(--f-corpo, Archivo, system-ui, sans-serif); font-size: .72rem; font-weight: 700; font-stretch: 80%; text-transform: uppercase; letter-spacing: .05em; line-height: 1.2; color: var(--tinta-2, #3b3433); } .ds-placa[data-state=\"aberto\"] .ds-placa__estado { color: var(--vermelho, #d4161c); } .ds-placa[data-state=\"aberto\"] .ds-placa__corpo { border-color: var(--vermelho, #d4161c); } .ds-placa:focus-visible { outline: 3px solid var(--vermelho-vivo, #ff4a3d); outline-offset: 3px; } @keyframes ds-balanco { 0% { transform: rotate(11deg); } 22% { transform: rotate(-7deg); } 44% { transform: rotate(4deg); } 66% { transform: rotate(-2deg); } 84% { transform: rotate(.8deg); } 100% { transform: rotate(0); } } @media (prefers-reduced-motion: reduce) { .ds-placa { animation: none; } }"
+    },
+    {
+      "name": "Navegação do Topo",
+      "kind": "nav",
+      "refersTo": "topo",
+      "description": "Header on the wall: condensed uppercase links with a red underline painted in on hover, plus the red Pedir button.",
+      "html": "<div class=\"ds-parede\"><nav class=\"ds-nav\"><a href=\"#\">Cardápio</a><a href=\"#\">A casa</a><a href=\"#\">Onde fica</a><a class=\"ds-botao ds-botao--vermelho\" href=\"#\"><svg class=\"ds-icone\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5.5 8.5h13l-1.2 11.5H6.7L5.5 8.5ZM9 8.5V7a3 3 0 0 1 6 0v1.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>Pedir</a></nav></div>",
+      "css": ".ds-parede { background: var(--parede, #0c0b0b); padding: 40px 32px; } .ds-botao { display: inline-flex; align-items: center; justify-content: center; gap: .55em; min-height: 48px; padding: .7em 1.2em; border: 3px solid var(--tinta, #141111); border-radius: 5px 3px 6px 3px; font-family: var(--f-corpo, Archivo, system-ui, sans-serif); font-weight: 800; font-stretch: 82%; font-size: 1rem; line-height: 1.1; letter-spacing: .03em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: transform .25s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)), background-color .2s, color .2s; } .ds-botao .ds-icone { width: 1.25em; height: 1.25em; transition: transform .25s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)); } .ds-botao:hover { transform: translateY(-2px) rotate(-1deg); } .ds-botao:hover .ds-icone { transform: translateX(2px); } .ds-botao:active { transform: translateY(1px); } .ds-botao:focus-visible { outline: 3px solid var(--vermelho-vivo, #ff4a3d); outline-offset: 3px; } .ds-botao--vermelho { background: var(--vermelho, #d4161c); color: #fff; padding-inline: 1em; } .ds-botao--vermelho:hover { background: var(--vermelho-escuro, #a10e13); } .ds-nav { display: flex; align-items: center; gap: 2rem; } .ds-nav a:not(.ds-botao) { color: var(--papel, #f6f4ef); font-family: var(--f-corpo, Archivo, system-ui, sans-serif); font-weight: 750; font-stretch: 80%; text-transform: uppercase; letter-spacing: .06em; font-size: .95rem; text-decoration: none; padding: .3rem 0; background: linear-gradient(var(--vermelho, #d4161c), var(--vermelho, #d4161c)) 0 100% / 0 3px no-repeat; transition: background-size .35s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)); } .ds-nav a:not(.ds-botao):hover, .ds-nav a:not(.ds-botao):focus-visible { background-size: 100% 3px; } .ds-nav a:focus-visible { outline: 3px solid var(--vermelho-vivo, #ff4a3d); outline-offset: 3px; }"
+    },
+    {
+      "name": "Estrela de Oferta",
+      "kind": "custom",
+      "refersTo": "estrela",
+      "description": "Red 36-point burst with paper stroke, lettered in brush; links to ordering.",
+      "html": "<div class=\"ds-parede\"><a class=\"ds-estrela\" href=\"#\" aria-label=\"Pede aí: abrir o cardápio\"><svg viewBox=\"-4 -4 208 208\" aria-hidden=\"true\"><polygon points=\"100.0,-2.0 113.5,23.2 133.2,8.8 139.0,32.5 165.6,21.9 159.8,49.9 184.0,51.5 173.3,73.3 200.5,82.3 178.0,100.0 195.5,116.8 173.3,126.7 188.3,151.0 159.8,150.1 162.4,174.3 139.0,167.5 134.9,195.8 113.5,176.8 100.0,197.0 86.5,176.8 65.1,195.8 61.0,167.5 37.6,174.3 40.2,150.1 11.7,151.0 26.7,126.7 4.5,116.8 22.0,100.0 -0.5,82.3 26.7,73.3 16.0,51.5 40.2,49.9 34.4,21.9 61.0,32.5 66.8,8.8 86.5,23.2\"/></svg><span class=\"ds-estrela__texto\">Pede<br>aí!</span></a></div>",
+      "css": ".ds-parede { background: var(--parede, #0c0b0b); padding: 40px 32px; } .ds-estrela { position: relative; display: grid; place-items: center; width: 150px; aspect-ratio: 1; color: #fff; text-decoration: none; transform: rotate(-10deg); transition: transform .4s var(--ease-colar, cubic-bezier(.16, 1, .3, 1)); filter: drop-shadow(0 10px 14px rgba(0,0,0,.6)); } .ds-estrela svg { position: absolute; inset: 0; width: 100%; height: 100%; fill: var(--vermelho, #d4161c); stroke: var(--papel, #f6f4ef); stroke-width: 5; paint-order: stroke; } .ds-estrela__texto { position: relative; font-family: var(--f-pincel, \"Permanent Marker\", cursive); font-size: 1.75rem; line-height: .95; text-align: center; text-transform: uppercase; } .ds-estrela:hover { transform: rotate(4deg) scale(1.06); } .ds-estrela:focus-visible { outline: 3px solid var(--vermelho-vivo, #ff4a3d); outline-offset: 3px; border-radius: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Parede do Letrista",
+    "overview": "The page is the black plank wall of the house itself, and everything that carries information is a piece of paper a sign painter lettered and someone pasted up with masking tape. Headings are slab sign lettering with a painted shade; prices, captions and asides are quick fat-marker brush; the fine print is a plain condensed grotesque. Nothing sits square: every poster is a few degrees off, held by a strip or two of tape, and casts a real paper shadow on the wood.\n\nDensity is that of a busy poster wall, not a dashboard: big type, few words per poster, generous wall showing between posters, and food photography doing the warm colour work. The palette is the house's own: black, red and white, with tape beige as the only extra material. The world draws from the venue's black wall and the pig sticker logo; the tray-liner doodle pattern (crowns, hearts, card suits) appears as a printed paper texture on the \"E tem mais\" poster and as the torn strip above the footer.\n\nThe visual rejection the build commits to: a uniform grid of rounded cards on a dark background with a giant hero photo. The menu is a crooked wall of posters instead.",
+    "keyCharacteristics": [
+      "Black plank wall (a 1200x900 procedurally rendered wood tile) behind everything; paper on top.",
+      "Three hands of lettering: slab sign, marker brush, printed grotesque, each with a fixed job.",
+      "Every surface is tilted (between about -2.4deg and 3.2deg), taped, and shadowed like pasted paper.",
+      "Red is ink, not decoration: headings, prices, primary buttons, and one red poster per wall.",
+      "Motion is \"being pasted\": posters drop in rotated and settle with a long ease-out, tape lands after."
+    ],
+    "rules": [
+      {
+        "name": "The Two Reds Rule",
+        "body": "Brand red (vermelho) is for paper; on the black wall, red text switches to the vivid red (vermelho-vivo). Brand red never sets text directly on the wall.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Inks Rule",
+        "body": "Wall black, paper white, sign red, plus tape. No other hue enters the interface; warmth comes from the food photographs.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Red Poster Rule",
+        "body": "A wall carries at most one fully red poster (the Danger Burguer). On it, every ink inverts: name in paper with an ink shade, price and tagline in paper, badge in ink, button in paper.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Hands Rule",
+        "body": "Slab names things, brush talks, Archivo informs. Never set a paragraph in brush, never set body copy in slab, never use Archivo for a heading.",
+        "section": "typography"
+      },
+      {
+        "name": "The Painted Shade Rule",
+        "body": "Slab lettering always carries a hard, unblurred offset shade of 0.05-0.06em (`text-shadow: .055em .055em 0`): red letters shade in ink, paper or ink letters shade in red. This is the sign painter's drop shade, used on lettering only.",
+        "section": "typography"
+      },
+      {
+        "name": "The Poster Price Rule",
+        "body": "Prices read like a shop sign: a small \"R$\" top-aligned (1.35rem), a huge brush integer, and raised cents (1.7rem) underlined with a 3px rule in the same colour. Always pair it with an `aria-label` reading the value in words.",
+        "section": "typography"
+      },
+      {
+        "name": "The Crooked Wall Rule",
+        "body": "Adjacent posters alternate tilt direction (for example -1deg, 1.6deg, -1.8deg, 1.2deg) and never line up their tops on desktop. A straight row of equal cards is off-world.",
+        "section": "layout"
+      },
+      {
+        "name": "The Pasted Paper Rule",
+        "body": "Anything that holds information on the wall is paper: tilted, shadowed with the pasted-paper shadow, and held by tape (one centred strip, or two strips at the top corners at -9deg and 8deg). Nothing floats without tape or a nail.",
+        "section": "elevation"
+      },
+      {
+        "name": "The No Perfect Corner Rule",
+        "body": "No uniform 8/12/16px radius anywhere. Corners are near-square and slightly uneven; circles belong only to stickers.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do put every information surface on paper, tilt it with `--r` (roughly -2.4deg to 3.2deg), alternate the tilt direction from its neighbour, and tape it.",
+      "Do set slab lettering uppercase with a 0.05-0.06em hard painted shade: ink under red, red under paper or ink.",
+      "Do write prices as poster prices: small R$, huge brush integer, raised underlined cents, with an aria-label in words.",
+      "Do use Sign-Painter Red (#d4161c) for red text on paper and Neon Brush Red (#ff4a3d) for red text on the black wall.",
+      "Do animate new posters as \"being pasted\": start rotated (3x tilt + 4deg), 28px higher and 6% larger, settle over 0.75s on cubic-bezier(.16, 1, .3, 1) with a 90ms stagger, tape landing 380ms later; skip it entirely under reduced motion and for posters already in view.",
+      "Do keep a Saipos order button in reach on every viewport: in the hero, on each poster, in the header (desktop) or fixed bar (mobile), and at the close."
+    ],
+    "donts": [
+      "Don't lay posters out as a straight grid of identical rounded cards on a dark background.",
+      "Don't use any hue beyond black, paper, red and tape beige in the interface.",
+      "Don't set Sign-Painter Red text directly on the black wall (3.68:1).",
+      "Don't use uniform rounded corners (8/12/16px) or pills, except on stickers (badge, burst).",
+      "Don't use glows, glass, or colour gradients as fills; gradients appear only as paper texture (grain, light bloom, crease lines), and depth comes only from paper shadows.",
+      "Don't set paragraphs in brush or body text in slab.",
+      "Don't put more than one fully red poster on a wall."
+    ]
+  }
+}
