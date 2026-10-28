@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bacon Burguer · Hamburgueria no Jardim Vergueiro, SP</title>
+  <meta name="description" content="Bacon Burguer: hambúrguer artesanal no Jardim Vergueiro, zona sul de São Paulo. Pão artesanal, blend de 160g e bacon fritinho. Peça pelo Saipos ou Keeta.">
+  <meta name="theme-color" content="#0d0c0c">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Bacon Burguer · Hamburgueria">
+  <meta property="og:description" content="Pão artesanal, blend de 160g e bacon fritinho. Jardim Vergueiro, São Paulo.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="assets/fonts/alfa-slab-one.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/permanent-marker.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Bacon Burguer",
+    "servesCuisine": "Hambúrguer",
+    "telephone": "+55 11 93437-1711",
+    "image": "assets/img/og.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Amaro Velho, 111",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "05818-230",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "16:00", "closes": "22:45" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday", "Sunday"], "opens": "16:00", "closes": "23:45" }
+    ],
+    "sameAs": ["https://www.instagram.com/baconburguer_hamburgueria/"],
+    "hasMenu": "https://baconburguer.saipos.com/home"
+  }
+  </script>
+</head>
+<body>
+<!--
+THESIS: A parede preta da casa coberta de cartazes de letrista: o cardápio é uma parede de ofertas pintadas à mão, não uma grade de cards em fundo escuro com foto gigante.
+OWN-WORLD: Parede de tábuas pretas; papel branco colado com fita crepe; tinta vermelha e preta de pincel; letreiro slab com sombra pintada (Alfa Slab One), letra de pincel atômico nos preços e recados (Permanent Marker), corpo em Archivo. Preço no formato de cartaz: R$ pequeno, número gigante, centavos sublinhados. Estrela vermelha de oferta. Porco da logo como selo.
+STORY: O visitante vê o lanche e o nome da casa colados na parede, entende que é hambúrguer artesanal de quebrada, escolhe um cartaz e toca em Pedir (Saipos ou Keeta), ou descobre onde fica e se está aberto agora.
+FIRST VIEWPORT: Cartaz branco grande, levemente torto, ocupando ~60% à esquerda: BACON BURGUER em slab vermelho, recado de pincel, botões Pedir no Saipos e Pedir no Keeta dentro do cartaz. À direita, foto do Danger Burguer presa com fita, sobreposta ao cartaz, com estrela vermelha PEDE AÍ. Placa ABERTO/FECHADO pendurada no topo. No celular, cartaz em cima, foto embaixo, barra fixa de pedido.
+FORM: Cartaz de letrista, posição 3 da lista ordenada; seed 8b72f59b (roll degradado, sem desafiantes).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="pig" viewBox="0 0 210 120">
+      <path d="M33 47c-9 1-16-4-15-10 1-5 8-6 10-1 2 4-3 8-8 6" style="fill:none;stroke:var(--pig-ink,#111)" stroke-width="6" stroke-linecap="round"/>
+      <path d="M34 60c-2-20 20-33 52-33h42c12 0 21-4 27-12l6-11c4 6 6 13 6 20 10 4 18 11 22 19l7 1c6 1 7 13 1 15l-9 2c-4 9-11 15-20 18v19c0 7-13 7-13 0V86h-9v13c0 7-13 7-13 0V85c-21 4-45 4-64 0v13c0 7-13 7-13 0V82h-7v12c0 7-13 7-13 0V75c-3-4-4-9-3-15Z" style="fill:var(--pig-fill,#fff);stroke:var(--pig-ink,#111)" stroke-width="7" stroke-linejoin="round"/>
+      <circle cx="173" cy="41" r="4.5" style="fill:var(--pig-ink,#111)"/>
+      <path d="M196 51v6M150 22c5 2 11 3 17 2" style="fill:none;stroke:var(--pig-ink,#111)" stroke-width="4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5.5 8.5h13l-1.2 11.5H6.7L5.5 8.5ZM9 8.5V7a3 3 0 0 1 6 0v1.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.8-6.5-11a6.5 6.5 0 0 1 13 0c0 5.2-6.5 11-6.5 11Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.1" cy="6.9" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-whats" viewBox="0 0 24 24"><path d="M4 20l1.2-3.9A8.3 8.3 0 1 1 8 19Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M9.2 8.2c-.6.5-.7 1.4-.2 2.6.9 2 2.3 3.4 4.3 4.3 1.2.5 2 .3 2.6-.3l.3-.9-1.9-1-.9.8c-1-.4-2-1.4-2.4-2.4l.8-.9-1-1.9-.8.2Z" fill="currentColor"/></symbol>
+    <symbol id="burst" viewBox="-4 -4 208 208"><polygon points="100.0,-2.0 113.5,23.2 133.2,8.8 139.0,32.5 165.6,21.9 159.8,49.9 184.0,51.5 173.3,73.3 200.5,82.3 178.0,100.0 195.5,116.8 173.3,126.7 188.3,151.0 159.8,150.1 162.4,174.3 139.0,167.5 134.9,195.8 113.5,176.8 100.0,197.0 86.5,176.8 65.1,195.8 61.0,167.5 37.6,174.3 40.2,150.1 11.7,151.0 26.7,126.7 4.5,116.8 22.0,100.0 -0.5,82.3 26.7,73.3 16.0,51.5 40.2,49.9 34.4,21.9 61.0,32.5 66.8,8.8 86.5,23.2"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#cardapio">Pular para o cardápio</a>
+
+<header class="topo">
+  <a class="marca" href="#inicio" aria-label="Bacon Burguer, voltar ao início">
+    <svg class="marca__porco" aria-hidden="true"><use href="#pig"/></svg>
+    <span class="marca__nome">Bacon<br>Burguer</span>
+  </a>
+  <nav class="topo__nav" aria-label="Seções">
+    <a href="#cardapio">Cardápio</a>
+    <a href="#casa">A casa</a>
+    <a href="#onde">Onde fica</a>
+  </nav>
+  <a class="placa" href="#onde" data-status aria-live="polite">
+    <span class="placa__fio" aria-hidden="true"></span>
+    <span class="placa__corpo">
+      <span class="placa__estado" data-status-label>16h às 23h45</span>
+      <span class="placa__detalhe" data-status-detail>ter a dom</span>
+    </span>
+  </a>
+  <a class="botao botao--vermelho topo__pedir" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">
+    <svg class="icone" aria-hidden="true"><use href="#i-bag"/></svg>Pedir
+  </a>
+</header>
+
+<main id="inicio">
+
+  <!-- ABERTURA -->
+  <section class="abertura" aria-labelledby="titulo">
+    <div class="abertura__cartaz cartaz cartaz--grande">
+      <span class="fita fita--e" aria-hidden="true"></span>
+      <span class="fita fita--d" aria-hidden="true"></span>
+      <h1 id="titulo" class="letreiro">
+        <span class="letreiro__linha">Bacon</span>
+        <span class="letreiro__linha">Burguer</span>
+      </h1>
+      <p class="pincel abertura__recado">Pão artesanal, blend de 160g e bacon fritinho. <em>Do jeito da quebrada.</em></p>
+      <div class="abertura__acoes" data-hero-actions>
+        <a class="botao botao--vermelho botao--grande" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">
+          Pedir no Saipos <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a class="botao botao--tinta botao--grande" href="https://fooddelivery-eu.mykeeta.com/mpweb/shop_golden?useShopPoi=1&amp;channel=googlemap&amp;shopId=159385550&amp;cityId=102302389&amp;lch=default%7E*googlemap%7E*BR%7E*159385550&amp;locale=pt-BR&amp;region=BR&amp;utm_source=organic&amp;utm_medium=others&amp;utm_campaign=googlemap" target="_blank" rel="noopener">
+          Pedir no Keeta <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+      <p class="abertura__rodape">
+        <svg class="icone" aria-hidden="true"><use href="#i-pin"/></svg>
+        <a href="#onde">R. Amaro Velho, 111 · Jardim Vergueiro, SP</a>
+      </p>
+    </div>
+
+    <figure class="abertura__foto foto-colada">
+      <span class="fita fita--topo" aria-hidden="true"></span>
+      <img src="assets/img/burger-danger.webp" width="700" height="467" alt="Danger Burguer: pão artesanal escuro, duas carnes, cheddar derretido e bacon, sobre tábua de madeira" fetchpriority="high">
+      <figcaption class="pincel">Danger Burguer · 2 carnes de 160g</figcaption>
+    </figure>
+
+    <a class="estrela" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener" aria-label="Pede aí: abrir o cardápio no Saipos">
+      <svg aria-hidden="true"><use href="#burst"/></svg>
+      <span class="estrela__texto">Pede<br>aí!</span>
+    </a>
+
+    <svg class="seta-pincel" viewBox="0 0 140 90" aria-hidden="true"><path d="M8 12c30 4 70 18 92 58m0 0-2-22m2 22-20-8" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </section>
+
+  <!-- FAIXA -->
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa__trilho">
+      <span>Blend de 160g</span><svg><use href="#pig"/></svg>
+      <span>Pão artesanal</span><svg><use href="#pig"/></svg>
+      <span>Bacon fritinho</span><svg><use href="#pig"/></svg>
+      <span>Molho secreto</span><svg><use href="#pig"/></svg>
+      <span>Terça a domingo, a partir das 16h</span><svg><use href="#pig"/></svg>
+      <span>Blend de 160g</span><svg><use href="#pig"/></svg>
+      <span>Pão artesanal</span><svg><use href="#pig"/></svg>
+      <span>Bacon fritinho</span><svg><use href="#pig"/></svg>
+      <span>Molho secreto</span><svg><use href="#pig"/></svg>
+      <span>Terça a domingo, a partir das 16h</span><svg><use href="#pig"/></svg>
+    </div>
+  </div>
+
+  <!-- CARDÁPIO -->
+  <section id="cardapio" class="secao cardapio" aria-labelledby="titulo-cardapio">
+    <header class="secao__cabeca">
+      <h2 id="titulo-cardapio" class="letreiro-parede">O cardápio</h2>
+      <p class="pincel secao__nota">Escolhe o seu e pede aí.</p>
+    </header>
+
+    <ol class="mural" role="list">
+      <li class="cartaz oferta oferta--destaque" style="--r:-1deg">
+        <figure class="oferta__foto">
+          <span class="fita fita--topo" aria-hidden="true"></span>
+          <img src="assets/img/burger-bacon.webp" width="700" height="467" loading="lazy" alt="Bacon Burguer com cheddar, bacon, alface, tomate e cebola roxa no pão artesanal">
+        </figure>
+        <div class="oferta__corpo">
+          <p class="oferta__num pincel" aria-hidden="true">Nº 1</p>
+          <h3 class="oferta__nome">Bacon Burguer</h3>
+          <p class="oferta__chamada pincel">O que dá nome à casa.</p>
+          <p class="oferta__desc">Pão artesanal, 160g do nosso blend, bacon fritinho, queijo cheddar, alface, tomate, cebola roxa e molho secreto.</p>
+          <p class="preco" aria-label="41 reais"><span class="preco__rs">R$</span><span class="preco__int">41</span><span class="preco__cent">,00</span></p>
+          <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+
+      <li class="cartaz oferta" style="--r:1.6deg">
+        <figure class="oferta__foto">
+          <span class="fita fita--topo" aria-hidden="true"></span>
+          <img src="assets/img/burger-baconritos.webp" width="700" height="467" loading="lazy" alt="Baconritos com Doritos, bacon, cheddar e maionese artesanal">
+        </figure>
+        <div class="oferta__corpo">
+          <p class="oferta__num pincel" aria-hidden="true">Nº 2</p>
+          <h3 class="oferta__nome">Baconritos</h3>
+          <p class="oferta__chamada pincel">Tem Doritos dentro. Isso mesmo.</p>
+          <p class="oferta__desc">Pão artesanal, 160g do nosso blend, bacon, queijo cheddar, alface, cebola roxa, nossa maionese artesanal e Doritos.</p>
+          <p class="preco" aria-label="45 reais"><span class="preco__rs">R$</span><span class="preco__int">45</span><span class="preco__cent">,00</span></p>
+          <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+
+      <li class="cartaz oferta" style="--r:-1.8deg">
+        <figure class="oferta__foto">
+          <span class="fita fita--topo" aria-hidden="true"></span>
+          <img src="assets/img/burger-smash.webp" width="700" height="467" loading="lazy" alt="Smash Burguer com duas carnes finas, cheddar e alface no pão macio">
+        </figure>
+        <div class="oferta__corpo">
+          <p class="oferta__num pincel" aria-hidden="true">Nº 3</p>
+          <h3 class="oferta__nome">Smash Burguer</h3>
+          <p class="oferta__chamada pincel">Duas carnes, zero frescura.</p>
+          <p class="oferta__desc">Pão artesanal, 2 blends de 60g cada, alface, cebola bem picadinha e nosso molho secreto.</p>
+          <p class="preco" aria-label="37 reais"><span class="preco__rs">R$</span><span class="preco__int">37</span><span class="preco__cent">,00</span></p>
+          <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+
+      <li class="cartaz cartaz--vermelho oferta oferta--perigo" style="--r:1.2deg">
+        <figure class="oferta__foto">
+          <span class="fita fita--topo" aria-hidden="true"></span>
+          <img src="assets/img/burger-danger.webp" width="700" height="467" loading="lazy" alt="Danger Burguer com duas carnes de 160g, cheddar, bacon e espeto de bambu">
+        </figure>
+        <div class="oferta__corpo">
+          <p class="oferta__num pincel" aria-hidden="true">Nº 4</p>
+          <h3 class="oferta__nome">Danger Burguer</h3>
+          <p class="oferta__chamada pincel">Perigo: duas carnes de 160g.</p>
+          <p class="oferta__desc">Pão, duas carnes de 160g, queijo cheddar, molho secreto e bacon.</p>
+          <p class="preco" aria-label="52 reais"><span class="preco__rs">R$</span><span class="preco__int">52</span><span class="preco__cent">,00</span></p>
+          <a class="botao botao--papel" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Encarar esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+
+      <li class="cartaz oferta" style="--r:-.8deg">
+        <figure class="oferta__foto">
+          <span class="fita fita--topo" aria-hidden="true"></span>
+          <img src="assets/img/burger-sweet-onion.webp" width="700" height="467" loading="lazy" alt="Sweet Onion com cebola caramelizada, cheddar e bacon no pão artesanal">
+        </figure>
+        <div class="oferta__corpo">
+          <p class="oferta__num pincel" aria-hidden="true">Nº 5</p>
+          <h3 class="oferta__nome">Sweet Onion</h3>
+          <p class="oferta__chamada pincel">Cebola caramelizada no ponto.</p>
+          <p class="oferta__desc">Pão artesanal, 160g do nosso blend, queijo cheddar, bacon bem fritinho e cebola caramelizada.</p>
+          <p class="preco" aria-label="44 reais"><span class="preco__rs">R$</span><span class="preco__int">44</span><span class="preco__cent">,00</span></p>
+          <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir esse <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+
+      <li class="cartaz oferta oferta--mais" style="--r:.6deg">
+        <figure class="oferta__foto">
+          <span class="fita fita--e" aria-hidden="true"></span>
+          <span class="fita fita--d" aria-hidden="true"></span>
+          <img src="assets/img/mesa-bandejas.webp" width="1379" height="619" loading="lazy" alt="Mesa vista de cima com bandejas de hambúrguer, batata frita com cheddar e bacon, nuggets e molhos">
+        </figure>
+        <div class="oferta__corpo">
+          <h3 class="oferta__nome">E tem mais</h3>
+          <p class="oferta__desc">Porções, bebidas e o resto do cardápio tão tudo no cardápio completo, com preço atualizado.</p>
+          <a class="botao botao--tinta" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Ver cardápio completo <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- A CASA -->
+  <section id="casa" class="secao casa" aria-labelledby="titulo-casa">
+    <header class="secao__cabeca">
+      <h2 id="titulo-casa" class="letreiro-parede">A casa</h2>
+    </header>
+
+    <div class="casa__grade">
+      <div class="cartaz casa__texto" style="--r:-1.2deg">
+        <span class="fita fita--e" aria-hidden="true"></span>
+        <p class="casa__abre">Não é só delivery.</p>
+        <p>Galpão grande de parede preta, estante lotada de livro, quadro na parede, planta pra todo lado, mezanino e mesa de sinuca.</p>
+        <p class="pincel casa__convite">Senta, pede e fica à vontade.</p>
+      </div>
+
+      <figure class="foto-colada casa__foto casa__foto--a" style="--r:2deg">
+        <span class="fita fita--topo" aria-hidden="true"></span>
+        <img src="assets/img/casa-sinuca.webp" width="616" height="802" loading="lazy" alt="Salão da Bacon Burguer à noite, com mesa de sinuca em primeiro plano, quadros na parede e mezanino iluminado">
+        <figcaption class="pincel">a sinuca</figcaption>
+      </figure>
+
+      <figure class="foto-colada casa__foto casa__foto--b" style="--r:-2.4deg">
+        <span class="fita fita--topo" aria-hidden="true"></span>
+        <img src="assets/img/casa-estante.webp" width="525" height="851" loading="lazy" alt="Estante cheia de livros e bonecos, grama sintética e plantas, com quadros de personalidades no mezanino">
+        <figcaption class="pincel">a estante</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ONDE FICA -->
+  <section id="onde" class="secao onde" aria-labelledby="titulo-onde">
+    <header class="secao__cabeca">
+      <h2 id="titulo-onde" class="letreiro-parede">Onde fica</h2>
+    </header>
+
+    <div class="onde__grade">
+      <div class="cartaz horario" style="--r:-.9deg">
+        <span class="fita fita--e" aria-hidden="true"></span>
+        <span class="fita fita--d" aria-hidden="true"></span>
+        <h3 class="horario__titulo">Horário</h3>
+        <dl class="horario__lista">
+          <div data-dias="1"><dt>Segunda</dt><dd>Fechado</dd></div>
+          <div data-dias="2 3 4"><dt>Terça a quinta</dt><dd>16h às 22h45</dd></div>
+          <div data-dias="5 6 0"><dt>Sexta a domingo</dt><dd>16h às 23h45</dd></div>
+        </dl>
+        <p class="horario__hoje pincel" data-today hidden></p>
+      </div>
+
+      <div class="cartaz endereco" style="--r:1deg">
+        <span class="fita fita--topo" aria-hidden="true"></span>
+        <h3 class="endereco__titulo">Bacon Burguer</h3>
+        <address class="endereco__texto">
+          R. Amaro Velho, 111<br>
+          Jardim Vergueiro, São Paulo – SP<br>
+          CEP 05818-230
+        </address>
+        <ul class="endereco__links" role="list">
+          <li><a class="botao botao--vermelho" href="https://www.google.com/maps/search/?api=1&amp;query=R.+Amaro+Velho,+111+-+Jardim+Vergueiro,+S%C3%A3o+Paulo+-+SP,+05818-230" target="_blank" rel="noopener"><svg class="icone" aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a></li>
+          <li><a class="botao botao--tinta" href="https://wa.me/5511934371711" target="_blank" rel="noopener"><svg class="icone" aria-hidden="true"><use href="#i-whats"/></svg>(11) 93437-1711</a></li>
+          <li><a class="botao botao--tinta" href="https://www.instagram.com/baconburguer_hamburgueria/" target="_blank" rel="noopener"><svg class="icone" aria-hidden="true"><use href="#i-insta"/></svg>@baconburguer_hamburgueria</a></li>
+        </ul>
+      </div>
+
+      <div class="mapa foto-colada" style="--r:-.6deg">
+        <span class="fita fita--e" aria-hidden="true"></span>
+        <span class="fita fita--d" aria-hidden="true"></span>
+        <iframe title="Mapa: Bacon Burguer, R. Amaro Velho, 111, Jardim Vergueiro, São Paulo" src="https://www.google.com/maps?q=R.+Amaro+Velho,+111+-+Jardim+Vergueiro,+S%C3%A3o+Paulo+-+SP,+05818-230&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FECHAMENTO -->
+  <section class="fome" aria-labelledby="titulo-fome">
+    <svg class="fome__porco" aria-hidden="true"><use href="#pig"/></svg>
+    <h2 id="titulo-fome" class="fome__titulo">Bateu a fome?</h2>
+    <p class="pincel fome__sub">Então pede, que a gente manda.</p>
+    <div class="fome__acoes">
+      <a class="botao botao--vermelho botao--grande" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Pedir no Saipos <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="botao botao--papel botao--grande" href="https://fooddelivery-eu.mykeeta.com/mpweb/shop_golden?useShopPoi=1&amp;channel=googlemap&amp;shopId=159385550&amp;cityId=102302389&amp;lch=default%7E*googlemap%7E*BR%7E*159385550&amp;locale=pt-BR&amp;region=BR&amp;utm_source=organic&amp;utm_medium=others&amp;utm_campaign=googlemap" target="_blank" rel="noopener">Pedir no Keeta <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p class="rodape__marca"><svg class="rodape__porco" aria-hidden="true"><use href="#pig"/></svg>Bacon Burguer Hamburgueria</p>
+  <p>R. Amaro Velho, 111 · Jardim Vergueiro · São Paulo – SP</p>
+  <p class="rodape__links">
+    <a href="https://www.instagram.com/baconburguer_hamburgueria/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://wa.me/5511934371711" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener">Saipos</a>
+  </p>
+  <p class="rodape__mini">© <span data-year>2026</span> Bacon Burguer. Preços sujeitos a alteração; vale o que está no app de pedido.</p>
+</footer>
+
+<nav class="barra-pedido" aria-label="Fazer pedido" data-order-bar>
+  <a class="botao botao--vermelho" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener"><svg class="icone" aria-hidden="true"><use href="#i-bag"/></svg>Pedir no Saipos</a>
+  <a class="botao botao--papel" href="https://fooddelivery-eu.mykeeta.com/mpweb/shop_golden?useShopPoi=1&amp;channel=googlemap&amp;shopId=159385550&amp;cityId=102302389&amp;lch=default%7E*googlemap%7E*BR%7E*159385550&amp;locale=pt-BR&amp;region=BR&amp;utm_source=organic&amp;utm_medium=others&amp;utm_campaign=googlemap" target="_blank" rel="noopener">Keeta</a>
+</nav>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
