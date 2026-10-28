@@ -231,6 +231,52 @@ address { font-style: normal; }
 .botao--papel:hover { background: #fff; }
 .botao--grande { font-size: clamp(1rem, 2.4vw, 1.15rem); min-height: 56px; padding: .8em 1.4em; }
 
+/* ---------- easter egg do porco ---------- */
+
+[data-porco] { cursor: pointer; }
+[data-porco].is-cutucado { animation: cutucada .35s var(--ease-colar); }
+@keyframes cutucada {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.18, .86) rotate(-6deg); }
+  100% { transform: scale(1); }
+}
+.oinc {
+  position: fixed;
+  z-index: 60;
+  padding: .45rem .9rem .5rem;
+  font-family: var(--f-pincel);
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--vermelho);
+  background: var(--papel);
+  border: 3px solid var(--tinta);
+  border-radius: 1.4rem 1.4rem 1.4rem .3rem;
+  box-shadow: 0 10px 18px -6px rgba(0, 0, 0, .7);
+  pointer-events: none;
+  animation: oinc 2.2s var(--ease-colar) both;
+}
+@keyframes oinc {
+  0% { opacity: 0; transform: translateY(10px) scale(.6) rotate(-8deg); }
+  14% { opacity: 1; transform: translateY(0) scale(1.08) rotate(-4deg); }
+  24% { transform: scale(1) rotate(-4deg); }
+  80% { opacity: 1; transform: translateY(-6px) rotate(-4deg); }
+  100% { opacity: 0; transform: translateY(-22px) rotate(-4deg); }
+}
+.chuva-bacon {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  overflow: hidden;
+  pointer-events: none;
+}
+.chuva-bacon svg {
+  position: absolute;
+  top: 0;
+  height: auto;
+  aspect-ratio: 120 / 34;
+  filter: drop-shadow(0 6px 6px rgba(0, 0, 0, .45));
+}
+
 /* ---------- topo ---------- */
 
 .topo {
@@ -341,6 +387,14 @@ address { font-style: normal; }
 .placa[data-state="aberto"] .placa__estado { color: var(--vermelho); }
 .placa[data-state="aberto"] .placa__corpo { border-color: var(--vermelho); }
 .placa.is-balancando { animation: balanco 1.8s var(--ease-colar) both; }
+/* últimos 30 minutos: a placa vira vermelha e pisca feito letreiro */
+.placa[data-state="ultimos"] .placa__corpo { background: var(--vermelho); border-color: var(--tinta); animation: pisca 1.1s steps(1, end) infinite; }
+.placa[data-state="ultimos"] .placa__estado { color: #fff; font-size: .82rem; }
+.placa[data-state="ultimos"] .placa__detalhe { color: #fff; }
+@keyframes pisca {
+  0%, 100% { background: var(--vermelho); }
+  50% { background: var(--vermelho-escuro); }
+}
 @keyframes balanco {
   0% { transform: rotate(11deg); }
   22% { transform: rotate(-7deg); }
@@ -737,6 +791,42 @@ address { font-style: normal; }
 .oferta--retrato .oferta__foto img { aspect-ratio: 4 / 5; }
 .oferta--salao .oferta__num { background: var(--tinta); }
 
+/* ---------- avaliações ---------- */
+
+.frase-parede { margin: 0 0 clamp(2.5rem, 6vw, 4rem); }
+.frase-parede blockquote { margin: 0; }
+.frase-parede p {
+  font-family: var(--f-pincel);
+  font-size: clamp(2.2rem, 7.5vw, 4.4rem);
+  line-height: 1.05;
+  color: var(--papel);
+  max-width: 11em;
+  text-wrap: balance;
+}
+.frase-parede p::before { content: "“"; color: var(--vermelho-vivo); margin-right: .05em; }
+.frase-parede p::after { content: "”"; color: var(--vermelho-vivo); margin-left: .05em; }
+.frase-parede figcaption { margin-top: .75rem; font-size: 1.25rem; color: var(--vermelho-vivo); transform: rotate(-2deg); transform-origin: left; }
+
+.bilhete {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem 1.35rem 1.4rem;
+  background-image:
+    var(--grao-papel),
+    repeating-linear-gradient(180deg, transparent 0 1.55rem, rgba(20, 17, 17, .09) 1.55rem calc(1.55rem + 1px));
+  background-size: 180px 180px, auto;
+  background-position: 0 0, 0 .55rem;
+  /* papel arrancado do bloco: borda de cima picotada */
+  clip-path: polygon(0 6px, 4% 0, 9% 5px, 15% 1px, 21% 6px, 28% 0, 35% 5px, 42% 1px, 49% 6px, 56% 0, 63% 5px, 70% 1px, 77% 6px, 84% 0, 91% 5px, 100% 1px, 100% 100%, 0 100%);
+}
+.bilhete .fita--topo { top: 2px; }
+.bilhete__estrelas { display: flex; gap: .15rem; color: var(--vermelho); }
+.bilhete__estrelas svg { width: 1.3rem; height: 1.3rem; }
+.bilhete__texto { margin: .8rem 0 0; font-size: 1.02rem; line-height: 1.55; color: var(--tinta); }
+.bilhete__nome { margin-top: 1rem; font-size: 1.4rem; line-height: 1.1; color: var(--vermelho); }
+.bilhete__detalhe { margin-top: .25rem; font-size: .8rem; font-weight: 700; font-stretch: 82%; text-transform: uppercase; letter-spacing: .04em; color: var(--tinta-2); }
+.avaliacoes__dica { margin-bottom: .1rem; }
+
 /* ---------- a casa ---------- */
 
 .casa__grade {
@@ -986,6 +1076,7 @@ body { padding-bottom: 80px; }
   .mural--porcoes > .oferta:nth-child(even),
   .mural--shakes > .oferta:nth-child(even) { margin-top: 2.5rem; }
   .painel__dica { display: none; }
+  .mural--bilhetes > .bilhete:nth-child(even) { margin-top: 2.5rem; }
   .onde__grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mapa { grid-column: 1 / -1; }
   .mapa iframe { aspect-ratio: 16 / 7; }
@@ -1051,6 +1142,12 @@ body { padding-bottom: 80px; }
   .mural--porcoes > .oferta:nth-child(4) { grid-column: 3 / 10; }
   .mural--shakes > .oferta:nth-child(1) { grid-column: 3 / 7; }
   .mural--shakes > .oferta:nth-child(2) { grid-column: 7 / 11; margin-top: 3rem; }
+  .mural--bilhetes { gap: 2.5rem 1.75rem; }
+  .mural--bilhetes > .bilhete { grid-column: span 3; }
+  .mural--bilhetes > .bilhete:nth-child(2) { margin-top: 3rem; }
+  .mural--bilhetes > .bilhete:nth-child(3) { margin-top: 1rem; }
+  .mural--bilhetes > .bilhete:nth-child(4) { margin-top: 4rem; }
+  .frase-parede { margin-left: 8%; }
   .oferta--destaque { display: flex; }
   .oferta--destaque .oferta__corpo {
     display: grid;
@@ -1080,6 +1177,8 @@ body { padding-bottom: 80px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .placa.is-balancando { animation: none; }
+  .placa[data-state="ultimos"] .placa__corpo { animation: none; }
+  [data-porco].is-cutucado { animation: none; }
   .faixa__trilho { animation-duration: 120s; }
   .js .vai-colar { transform: rotate(var(--r, 0deg)); box-shadow: var(--sombra-papel); }
   .js .vai-colar .fita { opacity: 1; transform: none; }
