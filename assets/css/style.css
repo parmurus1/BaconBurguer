@@ -904,10 +904,18 @@ body { padding-bottom: 80px; }
   .mapa iframe { aspect-ratio: 4 / 5; }
 }
 
+/* Movimento reduzido: sem pulos nem balanço, mas o site não fica parado.
+   A faixa anda devagar e os cartazes aparecem com um fade curto. */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
-  .js .vai-colar { opacity: 1; transform: rotate(var(--r, 0deg)); box-shadow: var(--sombra-papel); }
-  .js .vai-colar .fita { opacity: 1; }
-  .faixa__trilho { flex-wrap: nowrap; }
+  .placa.is-balancando { animation: none; }
+  .faixa__trilho { animation-duration: 120s; }
+  .js .vai-colar { transform: rotate(var(--r, 0deg)); box-shadow: var(--sombra-papel); }
+  .js .vai-colar .fita { opacity: 1; transform: none; }
+  .js .vai-colar .fita--topo { transform: translateX(-50%) rotate(-3deg); }
+  .js .colou { transition: opacity .6s ease-out calc(var(--i, 0) * 90ms); }
+  .botao:hover, .estrela:hover, .oferta:hover { transform: rotate(var(--r, 0deg)); }
 }
+
+/* faixa para quando a pessoa passa o mouse ou foca nela */
+.faixa-moldura:hover .faixa__trilho { animation-play-state: paused; }

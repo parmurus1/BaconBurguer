@@ -93,7 +93,7 @@
 
   const colaveis = document.querySelectorAll(".mural > .cartaz, .casa__grade > *, .onde__grade > *");
 
-  if (!reduzMovimento && "IntersectionObserver" in window) {
+  if ("IntersectionObserver" in window) {
     const alturaTela = window.innerHeight;
     const pendentes = [];
 
