@@ -827,6 +827,61 @@ address { font-style: normal; }
 .bilhete__detalhe { margin-top: .25rem; font-size: .8rem; font-weight: 700; font-stretch: 82%; text-transform: uppercase; letter-spacing: .04em; color: var(--tinta-2); }
 .avaliacoes__dica { margin-bottom: .1rem; }
 
+/* ---------- prêmio ---------- */
+
+.medalha {
+  position: absolute;
+  z-index: 4;
+  top: clamp(-3.4rem, -7vw, -2.4rem);
+  right: clamp(-1.6rem, -3vw, -.6rem);
+  width: clamp(88px, 24vw, 128px);
+  transform: rotate(8deg);
+  transition: transform .4s var(--ease-colar);
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, .55));
+}
+.medalha svg { display: block; width: 100%; height: auto; overflow: visible; }
+.medalha:hover { transform: rotate(-4deg) scale(1.05); }
+.medalha__aro { font-family: var(--f-corpo); font-weight: 800; font-stretch: 75%; font-size: 10.5px; letter-spacing: .02em; fill: var(--tinta); }
+.medalha__num { font-family: var(--f-letreiro); font-size: 38px; fill: var(--papel); }
+
+.premio {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.75rem;
+  align-items: center;
+  margin-bottom: clamp(4rem, 9vw, 6rem);
+}
+.premio__foto { width: min(72%, 300px); justify-self: center; }
+.premio__cartaz { padding: clamp(2rem, 5vw, 2.75rem) clamp(1.25rem, 4vw, 2.5rem); }
+.premio__titulo {
+  font-family: var(--f-letreiro);
+  text-transform: uppercase;
+  font-size: clamp(1.9rem, 6vw, 3.1rem);
+  line-height: .95;
+  color: var(--tinta);
+  text-shadow: .05em .05em 0 var(--vermelho);
+  text-wrap: balance;
+}
+.premio__num {
+  display: inline-block;
+  margin-right: .1em;
+  font-size: 1.9em;
+  line-height: .8;
+  color: var(--vermelho);
+  text-shadow: .05em .05em 0 var(--tinta);
+  vertical-align: -.12em;
+}
+.premio__fonte {
+  margin-top: 1rem;
+  font-weight: 800;
+  font-stretch: 82%;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-size: .9rem;
+  color: var(--tinta-2);
+}
+.premio__valeu { margin-top: .9rem; font-size: clamp(1.3rem, 3.4vw, 1.6rem); color: var(--vermelho); }
+
 /* ---------- a casa ---------- */
 
 .casa__grade {
@@ -1143,6 +1198,9 @@ body { padding-bottom: 80px; }
   .mural--shakes > .oferta:nth-child(1) { grid-column: 3 / 7; }
   .mural--shakes > .oferta:nth-child(2) { grid-column: 7 / 11; margin-top: 3rem; }
   .mural--bilhetes { gap: 2.5rem 1.75rem; }
+  .premio { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 2rem; }
+  .premio__foto { grid-column: 2 / 5; width: 100%; }
+  .premio__cartaz { grid-column: 5 / 12; }
   .mural--bilhetes > .bilhete { grid-column: span 3; }
   .mural--bilhetes > .bilhete:nth-child(2) { margin-top: 3rem; }
   .mural--bilhetes > .bilhete:nth-child(3) { margin-top: 1rem; }

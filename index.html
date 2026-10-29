@@ -14,7 +14,7 @@
   <meta property="og:site_name" content="Bacon Burguer">
   <meta property="og:url" content="https://baconburguer.vercel.app/">
   <meta property="og:title" content="Bacon Burguer · Hamburgueria no Jardim Vergueiro">
-  <meta property="og:description" content="Pão artesanal, blend de 160g e bacon fritinho. Terça a domingo, a partir das 16h. Peça pelo Saipos ou Keeta.">
+  <meta property="og:description" content="7ª melhor hamburgueria pelo voto popular (Guia do Hambúrguer 2026). Pão artesanal, blend de 160g e bacon fritinho. Peça pelo Saipos ou Keeta.">
   <meta property="og:image" content="https://baconburguer.vercel.app/assets/img/og.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
@@ -53,7 +53,8 @@
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday", "Sunday"], "opens": "16:00", "closes": "23:45" }
     ],
     "sameAs": ["https://www.instagram.com/baconburguer_hamburgueria/"],
-    "hasMenu": "https://baconburguer.saipos.com/home"
+    "hasMenu": "https://baconburguer.saipos.com/home",
+    "award": "7ª Melhor Hamburgueria pelo Voto Popular — Guia do Hambúrguer, Ranking 2026, Grande São Paulo"
   }
   </script>
 </head>
@@ -140,14 +141,25 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <span class="fita fita--topo" aria-hidden="true"></span>
       <img src="assets/img/burger-danger.webp" width="700" height="467" alt="Danger Burguer: pão artesanal escuro, duas carnes, cheddar derretido e bacon, sobre tábua de madeira" fetchpriority="high">
       <figcaption class="pincel">Danger Burguer · 2 carnes de 160g</figcaption>
+      <a class="medalha" href="#premio" aria-label="7ª melhor hamburgueria pelo voto popular, Guia do Hambúrguer, ranking 2026. Ver o prêmio.">
+        <svg viewBox="0 0 140 172" aria-hidden="true">
+          <path d="M50 98 28 166l17-9 13 13 16-62Z" fill="#a10e13"/>
+          <path d="M90 98l22 68-17-9-13 13-16-62Z" fill="#d4161c"/>
+          <circle cx="70" cy="66" r="62" fill="#f6f4ef" stroke="#141111" stroke-width="4"/>
+          <circle cx="70" cy="66" r="41" fill="#d4161c" stroke="#141111" stroke-width="3"/>
+          <path id="aro-medalha" d="M70 66m-51 0a51 51 0 1 1 102 0a51 51 0 1 1-102 0" fill="none"/>
+          <text class="medalha__aro"><textPath href="#aro-medalha" textLength="316" lengthAdjust="spacing">MELHOR HAMBURGUERIA · VOTO POPULAR 2026 ·</textPath></text>
+          <text class="medalha__num" x="70" y="78" text-anchor="middle">7ª</text>
+        </svg>
+      </a>
     </figure>
+
 
     <a class="estrela" href="https://baconburguer.saipos.com/home" target="_blank" rel="noopener" aria-label="Pede aí: abrir o cardápio no Saipos">
       <svg aria-hidden="true"><use href="#burst"/></svg>
       <span class="estrela__texto">Pede<br>aí!</span>
     </a>
 
-    <svg class="seta-pincel" viewBox="0 0 140 90" aria-hidden="true"><path d="M8 12c30 4 70 18 92 58m0 0-2-22m2 22-20-8" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </section>
 
   <!-- FAIXA -->
@@ -158,11 +170,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <span>Pão artesanal</span><svg><use href="#pig"/></svg>
       <span>Bacon fritinho</span><svg><use href="#pig"/></svg>
       <span>Molho secreto</span><svg><use href="#pig"/></svg>
+      <span>7ª melhor hamburgueria pelo voto popular</span><svg><use href="#pig"/></svg>
       <span>Terça a domingo, a partir das 16h</span><svg><use href="#pig"/></svg>
       <span>Blend de 160g</span><svg><use href="#pig"/></svg>
       <span>Pão artesanal</span><svg><use href="#pig"/></svg>
       <span>Bacon fritinho</span><svg><use href="#pig"/></svg>
       <span>Molho secreto</span><svg><use href="#pig"/></svg>
+      <span>7ª melhor hamburgueria pelo voto popular</span><svg><use href="#pig"/></svg>
       <span>Terça a domingo, a partir das 16h</span><svg><use href="#pig"/></svg>
     </div>
   </div>
@@ -441,6 +455,21 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <h2 id="titulo-avaliacoes" class="letreiro-parede">Quem já veio</h2>
       <p class="pincel secao__nota">Avaliação de cliente, sem tirar nem pôr.</p>
     </header>
+
+    <div class="premio" id="premio">
+      <figure class="foto-colada premio__foto" style="--r:-2.5deg">
+        <span class="fita fita--topo" aria-hidden="true"></span>
+        <img src="assets/img/premio-guia-2026.webp" width="409" height="549" loading="lazy" alt="Placa do Guia do Hambúrguer: 7ª Melhor Hamburgueria pelo Voto Popular, Bacon Burguer, Ranking 2026, Grande São Paulo">
+        <figcaption class="pincel">a placa tá lá na parede</figcaption>
+      </figure>
+      <div class="cartaz premio__cartaz" style="--r:1.2deg">
+        <span class="fita fita--e" aria-hidden="true"></span>
+        <span class="fita fita--d" aria-hidden="true"></span>
+        <p class="premio__titulo"><span class="premio__num">7ª</span> melhor hamburgueria pelo voto popular</p>
+        <p class="premio__fonte">Guia do Hambúrguer · Ranking 2026 · Grande São Paulo</p>
+        <p class="pincel premio__valeu">Quem votou foi o povo. Valeu, quebrada!</p>
+      </div>
+    </div>
 
     <figure class="frase-parede">
       <blockquote><p>É um presente para a periferia.</p></blockquote>
