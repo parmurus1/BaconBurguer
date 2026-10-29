@@ -62,6 +62,9 @@ A neighbourhood burger house with a periferia identity: pretzel-style dark artes
 
 ## Evidence on Hand
 
+- Award (confirmed, plaque photo `assets/img/premio-guia-2026.webp`): 7ª Melhor Hamburgueria pelo Voto Popular — Guia do Hambúrguer, Ranking 2026, Grande São Paulo.
+- Real customer reviews (Samara, Renata Lauton, Isabel Santos, Theo), all 5 stars, supplied by the owner.
+
 - `assets/img/` — five product photos (one per burger) on dark wood, two venue photos, one top-down table photo.
 - No testimonials, ratings, awards or press were provided; never fabricate them.
 
